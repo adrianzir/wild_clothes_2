@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 550px 60px;
+    grid-gap: 0;
+    height: auto;
+    grid-template-areas: "header"
+                         "body "
+                         "footer"  ;
+
+
+}
+.navigation{
+    background-color: #f83303;
+    grid-area: header;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.navigation__list{
+    display: flex;
+    width: fit-content;
+    justify-content: space-between;
+}
+.navigation__list >li{
+    margin-right: 20px;
+    list-style: none;
+}
+.navigation__list > li > a{
+     color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: oswald;
+      font-style: oblique;
+    font-size: larger;
+}
+
+
+/*------------------------middle of the body-----------------------------------*/
+
+
+.section__shirtII__container{
+    grid-area: body;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 275px 275px;
+    grid-gap: 0;
+    height: auto;
+
+}
+.div__shirtII__image{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 540px;
+    padding: 15px 15px;
+    margin-bottom: 10px;
+   
+    
+
+}
+.div__shirtII__image > #shirtII__image {
+    width: 100%;
+    height: 95%;
+     border-radius: 20px;
+    border: solid black 1px;
+
+}
+.div__shirtII__features{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+}
+.div__shirtII__features> h2{
+    text-transform: capitalize;
+}
+.div__shirtII__description{
+    padding: 1rem;
+}
+#shirtII__button{
+
+    width: 10rem;
+    height: 2rem;
+    font-size: large;
+    background-color: rgb(238, 222, 1);
+    color: black;
+    border-radius: 20px;
+    border-style: none;
+    padding: 0,5rem;
+
+}
+.div__shirtII__features > *{
+    margin-top: 15px;
+}
+.div__shirtII__features > h2{
+    font-size: xx-large;
+}
+#size{
+    width: 4rem;
+    height: 2rem;
+}
+
+
+
+/*----------------------------------footer-------------------------------------*/
+
+
+.footer__shirtII{
+    grid-area: footer;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 10px;
+}
+.footer__shirtII > p, span{
+    margin: 10px;
+}
+
+/*----------media query--------------*/
+
+
+
+@media screen and (max-width: 600px){
+
+    .container{
+        grid-template-rows: 70px 1200px 60px;
+    }
+    .section__shirtII__container{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 550px 300px 150px;
+    grid-gap: 0;
+    width: 100vw;
+    height: 1200px;
+
+}
+.div__shirtII__image{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: 500px;
+    padding: 15px 15px;
+    margin-bottom: 10px;
+   
+    
+
+}
+.div__shirtII__features{
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+}
+.div__shirtII__description{
+    grid-row-start: 3 ;
+    grid-row-end: 4;
+}
+}
