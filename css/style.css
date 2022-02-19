@@ -331,6 +331,31 @@ ______________________________fifth page________________________________________
     }
     
 }
+@keyframes gradient{
+    0%{
+        background-color: white;
+        border-radius: 1%;
+    }
+    50%{
+        background-color: #d65f41;
+        border-radius: 10%;
+    }
+    100%{
+        background-color: #F83303;
+        border-radius: 15%;
+    }
+}
+.shirt:hover{
+     animation-name: gradient;
+    animation-duration: 3s;
+    animation-direction:normal;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-delay: 0.25s;
+
+
+}
 #ad{
     animation-name: move;
     animation-duration: 2s;
