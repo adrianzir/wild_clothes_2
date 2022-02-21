@@ -3,37 +3,8 @@
     margin: 0%;
   
 }
-nav{
-    padding: 10px ;
-    height: 50px;
-    background-color: #F83303;
-    font-style: oblique;
-    font-size: larger;
-    width: 100%;
-    margin-top: 0%;
-    position: fixed;
-    z-index: 1;
-    
-    
-}
-li{
-    list-style: none;
-    margin: 10px;
-    
-}
-li a{
-    text-decoration: none !important;
-    color: white;
-}
-ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    margin-right: 20px;
-    
 
-}
-article{
+#ad{
     margin-left: 950px;
     margin-top: 100px;
     padding: 15px;
@@ -42,7 +13,7 @@ article{
     width: 300px;
     position: absolute;
     right: 5rem;
-    background-color: brown;
+    background-color: #F83303;
     text-align: center;
     border: white double 15px;
 }
@@ -54,10 +25,10 @@ article{
     text-align: left;
 }
 .mainsection{
-    background-image: url("../images/neutraliza_4176c12b_800x1100.jpg");
+  background-image: url("../images/neutraliza_4176c12b_800x1100.jpg");
   height: 600px;
   width: 100%;
-  padding-top: 50px; 
+  padding-top: 90px; 
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -75,7 +46,7 @@ footer p{
 }
 .shirt {
     display: inline-block;
-    padding: 50px 100px;
+    padding: 50px 50px;
     margin: 30px;
     height: auto;
     width: auto;
@@ -195,7 +166,7 @@ legend{
     text-transform: uppercase;
     font-size: xx-large;
 }
-/*------------------------------------------------------------third page -------------------------------------*/
+/*------------------------------------------------------------third page (clothes) -------------------------------------*/
 .dad{
     height: 1000px;
     width: 100%;
@@ -228,59 +199,16 @@ legend{
     justify-content: center;
     align-items: center;
 }
-.container__2__button {
-    height: 90px;
-    width: 200px;
-    background-color: white;
-    color: black;
-    font-size: xx-large;
-    font-family: 'Playfair Display', serif;
-    border: #F83303 2px solid;
-    border-radius: 10px;
-}
 
-.container__1__button{
-    height: 90px;
-    width: 200px;
-    background-color: white;
-    color: black;
-    font-size: xx-large;
-    font-family: 'Playfair Display', serif;
-    border: #F83303 2px solid;
-    border-radius: 10px;
-}
-
-
-.container__1__button:hover{
-    background-color: rgb(224, 89, 35);
-    color: darkred;
-    border-color: darkred;
-    
-}
-.container__2__button:hover{
-    background-color: rgb(224, 89, 35);
-    color: darkred;
-    border-color: darkred;
-}
-
-.container__1__button:active{
-    background-color: rgb(94, 194, 228);
-    color: white;
-    border-color: rgb(94, 194, 228);
-    
-}
-.container__2__button:active{
-    background-color: rgb(94, 194, 228);
-    color: white;
-    border-color: rgb(94, 194, 228);
-    
-}
 /*_________________________________________________________________________________________
 __________________________________fourth page_____________________________________________*/
 .cart{
     padding-top: 80px;
-    height: 80vh;
+    height: 90vh;
     margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .cart__heading{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -318,52 +246,7 @@ ______________________________fifth page________________________________________
     font-size: x-large;
 }
 
-/*                   animation                       */
-@keyframes move{
-    0%{
-        transform: translateX(0%);
-   
-        
-        }
-  
-    100%{
-        transform: translateX(100%);
-    }
-    
-}
-@keyframes gradient{
-    0%{
-        background-color: white;
-        border-radius: 1%;
-    }
-    50%{
-        background-color: #d65f41;
-        border-radius: 10%;
-    }
-    100%{
-        background-color: #F83303;
-        border-radius: 15%;
-    }
-}
-.shirt:hover{
-     animation-name: gradient;
-    animation-duration: 3s;
-    animation-direction:normal;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-delay: 0.25s;
 
 
-}
-#ad{
-    animation-name: move;
-    animation-duration: 2s;
-    animation-direction: reverse;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-
-}
 
 

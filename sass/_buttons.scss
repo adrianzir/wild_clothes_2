@@ -1,0 +1,68 @@
+/*========================= cart buttons =================================00*/
+
+.button__div{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+.cart__button{
+    background-color: $rojito !important;
+    color: #fff !important;
+    width: 200px;
+
+
+        &:hover{
+            background-color: gold;
+        }
+}
+
+
+/*========================= clothes buttons =================================00*/
+
+.container__2__button {
+    height: 90px;
+    width: 200px;
+    background-color: white;
+    color: black;
+    font-size: xx-large;
+    font-family: 'Playfair Display', serif;
+    border: #F83303 2px solid;
+    border-radius: 10px;
+}
+
+.container__1__button{
+    height: 90px;
+    width: 200px;
+    background-color: white;
+    color: black;
+    font-size: xx-large;
+    font-family: 'Playfair Display', serif;
+    border: #F83303 2px solid;
+    border-radius: 10px;
+}
+
+
+.container__1__button:hover{
+    background-color: rgb(224, 89, 35);
+    color: darkred;
+    border-color: darkred;
+    
+}
+.container__2__button:hover{
+    background-color: rgb(224, 89, 35);
+    color: darkred;
+    border-color: darkred;
+}
+
+.container__1__button:active{
+    background-color: rgb(94, 194, 228);
+    color: white;
+    border-color: rgb(94, 194, 228);
+    
+}
+.container__2__button:active{
+    background-color: rgb(94, 194, 228);
+    color: white;
+    border-color: rgb(94, 194, 228);
+    
+}
