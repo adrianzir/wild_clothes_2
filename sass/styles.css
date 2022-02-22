@@ -9,7 +9,6 @@ nav {
   font-style: oblique;
   font-size: 120%;
   width: 100%;
-  margin-top: 0%;
   position: fixed;
   z-index: 1;
   display: -webkit-box;
@@ -71,6 +70,28 @@ nav li {
 nav a {
   text-decoration: none !important;
   color: #000;
+}
+
+.nav__2 {
+  height: 70px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: beige;
+  z-index: 0;
+  position: relative;
+  top: 90px;
+}
+
+.nav__2 #search__input {
+  width: 12rem;
+  margin: 1rem 0rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
 }
 
 /*========================transition ad=====================*/

@@ -7,7 +7,6 @@ nav{
     font-style: oblique;
     font-size: 120%;
     width: 100%;
-    margin-top: 0%;
     position: fixed;
     z-index: 1;
     display: flex;
@@ -51,6 +50,24 @@ nav{
                     color: #000;
                 }
                 
-                
+                 
+}
+.nav__2{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: beige;
+    z-index: 0;
+    position:relative;
+    top: 90px;
+        
+        #search__input{
+            width: 12rem;
+            margin: 1rem 0rem;
+            padding: 0.5rem;
+            border-radius: 1rem;
+
+        }
 }
 
