@@ -1,0 +1,30 @@
+// clothes page new config
+.dad{
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+    
+}
+@mixin imagen {
+    width: 35%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: solid black 2px;
+    border-radius: 50%;
+    padding: 0%;
+   
+}
+
+.container__1{
+    @include imagen();
+    background-image: url(../images/450_1000.jpg);
+}
+.container__2 {
+    @include imagen();
+    background-image: url(../images/tendencias-que-se-haran-grandes-invierno-2022-2-1641035277.jpg);
+}
+
+

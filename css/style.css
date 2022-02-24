@@ -1,8 +1,3 @@
-*{
-    padding: 0%;
-    margin: 0%;
-  
-}
 
 #ad{
     margin-left: 950px;
@@ -165,39 +160,6 @@ legend{
 .div__shirt__features h2{
     text-transform: uppercase;
     font-size: xx-large;
-}
-/*------------------------------------------------------------third page (clothes) -------------------------------------*/
-.dad{
-    height: 1000px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    padding-top: 50px;
-    
-}
-.container__1{
-    width: 50%;
-    height: 100%;
-    background-image: url(../images/450_1000.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border: solid black 2px;
-    padding: 0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container__2{
-    width: 50%;
-    height: 100%;
-    background-image: url(../images/tendencias-que-se-haran-grandes-invierno-2022-2-1641035277.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border: solid #F83303 2px;
-    padding: 0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /*_________________________________________________________________________________________

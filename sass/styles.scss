@@ -1,9 +1,30 @@
+//variables
+
 $rojito: #f83303;
+$activeColor: rgb(61, 244, 250);
+$colorLetraBoton: white;
+
+//general tags
+
 html{
     font-size: 100%;
 }
+*{
+    padding: 0%;
+    margin: 0%;
+  
+}
+//modulos sass
 
 @import "components";
 @import "animations";
 @import "buttons";
+@import "pageClothes";
+
+// map
+$colores-to-use: (
+    coloruno: gold ,
+    colordos: #56f,
+    colortres: #f91990,
+);
 

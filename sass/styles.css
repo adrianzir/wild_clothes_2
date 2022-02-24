@@ -2,6 +2,11 @@ html {
   font-size: 100%;
 }
 
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
 /*======================================== navbar component =============================================*/
 nav {
   padding: 10px;
@@ -209,49 +214,61 @@ nav a {
 }
 
 /*========================= clothes buttons =================================00*/
-.container__2__button {
+.container__2__button, .container__1__button {
   height: 90px;
   width: 200px;
   background-color: white;
   color: black;
   font-size: xx-large;
   font-family: 'Playfair Display', serif;
-  border: #F83303 2px solid;
+  border: #f83303 2px solid;
   border-radius: 10px;
 }
 
-.container__1__button {
-  height: 90px;
-  width: 200px;
-  background-color: white;
-  color: black;
-  font-size: xx-large;
-  font-family: 'Playfair Display', serif;
-  border: #F83303 2px solid;
-  border-radius: 10px;
-}
-
-.container__1__button:hover {
-  background-color: #e05923;
-  color: darkred;
-  border-color: darkred;
-}
-
-.container__2__button:hover {
-  background-color: #e05923;
-  color: darkred;
-  border-color: darkred;
-}
-
-.container__1__button:active {
-  background-color: #5ec2e4;
+.container__2__button:hover, .container__1__button:hover {
+  background-color: #f83303;
   color: white;
-  border-color: #5ec2e4;
+  border-color: #f83303;
 }
 
-.container__2__button:active {
-  background-color: #5ec2e4;
+.container__2__button:active, .container__1__button:active {
+  background-color: #3df4fa;
   color: white;
-  border-color: #5ec2e4;
+  border-color: #3df4fa;
+}
+
+.dad {
+  height: 1000px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-top: 50px;
+}
+
+.container__1 {
+  width: 35%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: solid black 2px;
+  border-radius: 50%;
+  padding: 0%;
+  background-image: url(../images/450_1000.jpg);
+}
+
+.container__2 {
+  width: 35%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border: solid black 2px;
+  border-radius: 50%;
+  padding: 0%;
+  background-image: url(../images/tendencias-que-se-haran-grandes-invierno-2022-2-1641035277.jpg);
 }
 /*# sourceMappingURL=styles.css.map */
