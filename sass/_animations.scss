@@ -1,6 +1,14 @@
 /*========================transition ad=====================*/
 #ad{
     transition: ease-in-out 1s 0.2s;
+    animation-name: move;
+    animation-duration: 2s;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+
+
 
         &:hover{
 
@@ -10,7 +18,6 @@
         }
 
 }
-
 /*============== animation ===============*/
 
 @keyframes move{
@@ -31,31 +38,23 @@
         border-radius: 1%;
     }
     50%{
-        background-color: #d65f41;
-        border-radius: 10%;
+        background-color: #b4b0af;
+        border-radius: 6%;
+        color: darkgrey;
     }
     100%{
-        background-color: #F83303;
-        border-radius: 15%;
+        background-color: #2d2d2ec9;
+        border-radius: 10%;
+        color: white;
     }
 }
 .shirt:hover{
-     animation-name: gradient;
-    animation-duration: 3s;
+    animation-name: gradient;
+    animation-duration: 2s;
     animation-direction:normal;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
     animation-delay: 0.25s;
 
-
 }
-#ad{
-    animation-name: move;
-    animation-duration: 2s;
-    animation-direction: reverse;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
 
-}

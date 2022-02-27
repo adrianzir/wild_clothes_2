@@ -7,9 +7,17 @@
 }
 .cart__button{
     background-color: $rojito !important;
-    color: #fff !important;
     width: 200px;
 
+        a{
+            text-decoration: none;
+            color: #fff !important;
+
+                &:hover{
+                    color: $activeColor;
+                }
+
+        }
 
         &:hover{
             background-color: gold;

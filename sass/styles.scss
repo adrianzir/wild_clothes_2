@@ -8,10 +8,15 @@ $colorLetraBoton: white;
 
 html{
     font-size: 100%;
+        a{
+            text-decoration: none;
+            color: black;
+        }
 }
 *{
     padding: 0%;
     margin: 0%;
+
   
 }
 //modulos sass
@@ -20,6 +25,7 @@ html{
 @import "animations";
 @import "buttons";
 @import "pageClothes";
+@import "footer";
 
 // map
 $colores-to-use: (

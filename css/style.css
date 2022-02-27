@@ -27,37 +27,53 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-footer{
-    background-color: black;
-    color: blanchedalmond;
-    height: 20%;
-    width: 100%;
-    text-align: center;
-    position: relative;
-}
-footer p{
- display: inline-block;
- margin: 20px 10px;
-}
+/*===================================================================================================
+ ================================= SHIRT OFERTS SECTION  ============================================
+ ====================================================================================================*/
 .shirt {
     display: inline-block;
-    padding: 50px 50px;
+    padding: 20px 25px;
     margin: 30px;
     height: auto;
     width: auto;
-   
+    transition: 3s background-color 1s ease-in;
+    cursor: pointer;
+    border: 1px grey solid;
 }
+.pic{
+    border: 1px black solid;
+}
+.shirt> p{
+    color: #F83303;
+    font-size: x-large;
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 1rem 0;
+    padding: 0.75rem 0.25rem;
+    border-bottom: #F83303 2px solid;
+}
+.shirt>del ,span{
+    display: block;
+    margin: 0.5rem 0;
+
+}
+
 
 .pic:hover {
     height: 350px ;
     width: 350px ;
 }
 #oferts{
-    padding: 10px;
+    padding: 10px 100px;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
 }
+/*=================================================================================================
+=======================================     FORM SECTION     ======================================
+===================================================================================================*/
 form{
     height: auto;
     width: fit-content;

@@ -2,6 +2,11 @@ html {
   font-size: 100%;
 }
 
+html a {
+  text-decoration: none;
+  color: black;
+}
+
 * {
   padding: 0%;
   margin: 0%;
@@ -93,7 +98,7 @@ nav a {
 }
 
 .nav__2 #search__input {
-  width: 12rem;
+  width: 28rem;
   margin: 1rem 0rem;
   padding: 0.5rem;
   border-radius: 1rem;
@@ -137,12 +142,14 @@ nav a {
     border-radius: 1%;
   }
   50% {
-    background-color: #d65f41;
-    border-radius: 10%;
+    background-color: #b4b0af;
+    border-radius: 6%;
+    color: darkgrey;
   }
   100% {
-    background-color: #F83303;
-    border-radius: 15%;
+    background-color: #2d2d2ec9;
+    border-radius: 10%;
+    color: white;
   }
 }
 
@@ -152,28 +159,28 @@ nav a {
     border-radius: 1%;
   }
   50% {
-    background-color: #d65f41;
-    border-radius: 10%;
+    background-color: #b4b0af;
+    border-radius: 6%;
+    color: darkgrey;
   }
   100% {
-    background-color: #F83303;
-    border-radius: 15%;
+    background-color: #2d2d2ec9;
+    border-radius: 10%;
+    color: white;
   }
 }
 
 .shirt:hover {
   -webkit-animation-name: gradient;
           animation-name: gradient;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-direction: normal;
           animation-direction: normal;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
   -webkit-animation-delay: 0.25s;
           animation-delay: 0.25s;
 }
@@ -205,8 +212,16 @@ nav a {
 
 .cart__button {
   background-color: #f83303 !important;
-  color: #fff !important;
   width: 200px;
+}
+
+.cart__button a {
+  text-decoration: none;
+  color: #fff !important;
+}
+
+.cart__button a:hover {
+  color: #3df4fa;
 }
 
 .cart__button:hover {
@@ -270,5 +285,50 @@ nav a {
   border-radius: 50%;
   padding: 0%;
   background-image: url(../images/tendencias-que-se-haran-grandes-invierno-2022-2-1641035277.jpg);
+}
+
+footer {
+  background-color: black;
+  color: blanchedalmond;
+  height: 15rem;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+footer .footer__div1 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+footer .footer__div1 p {
+  font-family: 'Playfair Display', serif;
+  font-size: large;
+  font-style: italic;
+}
+
+footer .footer__div1 div p {
+  font-weight: 900;
+}
+
+footer .footer__div1 div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .footer__div1 div ul li {
+  list-style: none;
+  margin: 0.75rem 0 0.5rem 0;
 }
 /*# sourceMappingURL=styles.css.map */
