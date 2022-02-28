@@ -4,27 +4,72 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    padding-top: 50px;
+    padding: 150px 0 1rem 0;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
     
 }
 @mixin imagen {
-    width: 35%;
-    height: 400px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    border: solid black 2px;
-    border-radius: 50%;
+    width: 45%;
+    height: 800px;
+    border: solid grey 0.5px;
     padding: 0%;
-   
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .container__1{
     @include imagen();
-    background-image: url(../images/450_1000.jpg);
+        .container__1-img{
+            height: inherit;
+
+        }
 }
 .container__2 {
     @include imagen();
-    background-image: url(../images/tendencias-que-se-haran-grandes-invierno-2022-2-1641035277.jpg);
+         .container__2-img{
+            height: inherit;
+
+        }
 }
 
+/*-------------------------------------------------------------
+-----------------clothes media query----------------------------*/
 
+@media screen and (max-width: 800px){
+    .dad{
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 120px;
+    gap: 10px;
+    
+}
+.container__1{
+    width: 100%;
+    height: 500px;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container__2{
+    width: 100%;
+    height: 500px;
+    padding: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container__2__button {
+    height: 90px;
+    width: 200px;
+}
+
+.container__1__button{
+    height: 90px;
+    width: 200px;
+}
+}

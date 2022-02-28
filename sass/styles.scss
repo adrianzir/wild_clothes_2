@@ -4,6 +4,10 @@ $rojito: #f83303;
 $activeColor: rgb(61, 244, 250);
 $colorLetraBoton: white;
 
+$elegantfont: 'Playfair Display', serif;
+$cursivefont: 'Courgette', cursive;
+$tetricfont: 'Gideon Roman', cursive;
+
 //general tags
 
 html{
@@ -12,6 +16,7 @@ html{
             text-decoration: none;
             color: black;
         }
+    scroll-behavior: smooth;
 }
 *{
     padding: 0%;
@@ -20,17 +25,12 @@ html{
   
 }
 //modulos sass
-
+@import "indexStyles";
 @import "components";
 @import "animations";
 @import "buttons";
 @import "pageClothes";
+@import "helpPage";
 @import "footer";
-
-// map
-$colores-to-use: (
-    coloruno: gold ,
-    colordos: #56f,
-    colortres: #f91990,
-);
+@import "shirt2Page";
 

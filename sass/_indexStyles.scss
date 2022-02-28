@@ -1,0 +1,327 @@
+
+#ad{
+    margin-top: 100px;
+    padding: 15px;
+    padding-bottom: 40px;
+    height: auto ;
+    width: 300px;
+    position: absolute;
+    right: 4.5rem;
+    bottom: 90px;
+    background-color: #F83303;
+    text-align: center;
+    border: white double 15px;
+    z-index: 1;
+        .sale{
+        font-size: 70px;
+        font-family: 'Playfair Display', serif;
+}
+}
+
+.lorem{
+    text-align: left;
+}
+.mainsection{
+  background-image: url("../images/neutraliza_4176c12b_800x1100.jpg");
+  height: 600px;
+  width: 100%;
+  padding-top: 120px; 
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+#mainsection__heading{
+    font-size: 80px;
+    font-family: $elegantfont;
+    color: white;
+    font-weight: 600;
+    font-style: italic;
+    margin: 1rem;
+    width: 50%;
+
+}
+/*===================================================================================================
+ ================================= SHIRT OFERTS SECTION  ============================================
+ ====================================================================================================*/
+.shirt {
+    display: inline-block;
+    padding: 20px 25px;
+    margin: 30px;
+    height: auto;
+    width: auto;
+    transition: 3s background-color 1s ease-in;
+    cursor: pointer;
+    border: 1px grey solid;
+}
+.pic{
+    border: 1px black solid;
+}
+.shirt> p{
+    color: #F83303;
+    font-size: x-large;
+    font-weight: bolder;
+    text-transform: capitalize;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 1rem 0;
+    padding: 0.75rem 0.25rem;
+    border-bottom: #F83303 2px solid;
+}
+.shirt>del ,span{
+    display: block;
+    margin: 0.5rem 0;
+
+}
+
+
+.pic:hover {
+    height: 350px ;
+    width: 350px ;
+}
+#oferts{
+    padding: 10px 100px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*=================================================================================================
+=======================================     FORM SECTION     ======================================
+===================================================================================================*/
+form{
+    height: auto;
+    width: fit-content;
+    padding: 20px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-style: outset;
+    margin: 10px 100px;
+    background-color: white;
+    
+}
+label{
+    margin: 10px ;
+    font-size: larger;
+
+}
+input{
+    margin: 10px;
+    height: 20px;
+    width: 50%;
+    padding:3px;
+    border-style: solid;
+    border-bottom-color: #F83303 ;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+#send{
+    width: 80px;
+    height: 30px;
+    padding: 5px 8px;
+    border: thin gray;
+    background-color: honeydew;
+}
+#send:hover{
+    background-color: rgb(176, 189, 176);
+}
+legend{
+    margin: 20px 20px;
+    font-size: x-large;
+    font-weight: bolder;
+}
+.formulario{
+    display: flex;
+    background-color: #F83303 ;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+//======================================================================
+//===================== MEDIA QUERIES===================================
+//===============================================================0=======
+/*======================================breakpoint(3)==================================*/
+
+@media  screen and (max-width: 400px) {
+    
+   
+    nav{
+        width: 100%;
+
+
+    }
+    .nav__container{
+                height: fit-content;
+                width: 35%;
+                
+    }
+     #brand{
+                        
+                        margin: 0;
+                       
+                    }
+
+   .mainsection{
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   padding: 50px 0px 0px 0px;
+   }
+    #ad{
+    display: none;
+       
+}
+
+#cat{
+    display: none;
+}
+form{
+    height: auto;
+    width: fit-content;
+    padding: 20px 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-style: outset;
+    margin: 10px 2rem;
+    background-color: white;
+    
+}
+#oferts{                                         
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-column: 2fr;
+    height: auto;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+     grid-template-areas: div1
+                         div2  ;
+}
+#eagle{
+    grid-area: div1;
+}
+#cat{
+    grid-area: div2;
+}
+
+.help__container{
+    padding-top: 130px;
+    height: fit-content;
+}
+    
+}
+/*=========================== breakpoint(4) index====================*/
+
+@media  screen and (max-width: 600px) {
+    
+   
+    nav{
+        width: 100%;
+
+    }
+    .nav__container{
+                height: fit-content;
+                width: 35%;
+                
+    }
+     #brand{
+                        
+                        margin: 0;
+                       
+                    }
+
+    #ad{
+    display: none;
+       
+}
+#cat{
+    display: none;
+}
+form{
+    height: auto;
+    width: fit-content;
+    padding: 20px 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-style: outset;
+    margin: 10px 2rem;
+    background-color: white;
+    
+}
+#oferts{
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-column: 2fr;
+    height: auto;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+     grid-template-areas: div1
+                         div2  ;
+}
+#eagle{
+    grid-area: div1;
+}
+#cat{
+    grid-area: div2;
+}
+
+
+}
+//============================================================================
+
+@media  screen and (max-width: 850px) {
+   
+    nav{
+        width: 100vw;
+    }
+   .mainsection{
+   display: flex;
+   justify-content: space-around;
+   align-items: flex-end;
+   }
+    #ad{
+    display: none;
+
+       
+}
+
+#oferts{
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 1fr 1fr;
+    grid-column: 2fr;
+    grid-template-areas: div1
+                         div2  ;
+    height: auto;
+    padding: 0;
+}
+#eagle{
+    grid-area: div1;
+}
+#cat{
+    grid-area: div2;
+    display: none;
+}
+}
+/*=============================================== breakpoint(1) ===========================================*/
+@media  screen and (max-width: 1100px) {
+    #oferts{
+    display: grid;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    padding: 0;
+}
+    
+}

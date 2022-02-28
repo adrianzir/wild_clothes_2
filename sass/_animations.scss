@@ -1,6 +1,6 @@
 /*========================transition ad=====================*/
 #ad{
-    transition: ease-in-out 1s 0.2s;
+    transition: ease-out 1s 0.2s;
     animation-name: move;
     animation-duration: 2s;
     animation-direction: reverse;
@@ -12,7 +12,7 @@
 
         &:hover{
 
-            width: 600px;
+            width: 560px;
             
 
         }

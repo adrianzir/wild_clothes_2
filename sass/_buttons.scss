@@ -28,14 +28,18 @@
 /*========================= clothes buttons =================================00*/
 
 @mixin buttons-styles {
-     height: 90px;
-    width: 200px;
+    height: 200px;
+    width: 300px;
     background-color: white;
     color: black;
-    font-size: xx-large;
+    font-size: xxx-large;
     font-family: 'Playfair Display', serif;
-    border: $rojito 2px solid;
+    opacity: 0.5;
     border-radius: 10px;
+    top: calc(800px / 2 - 100px);
+    right: calc(50% - 150px);
+    position: absolute;
+
 }
 .container__2__button , .container__1__button {
     @include buttons-styles();
@@ -44,10 +48,46 @@
             background-color: $rojito;
             color: $colorLetraBoton;
             border-color: $rojito;
+            opacity: 0.90;
+            cursor: pointer;
+        }
+        &:active{
+            opacity: 1 ;
+        }
+}
+//=================================================================000
+//============================  shirt 1 button  ======================
+//====================================================================
+
+@mixin buttonShirts {
+    width: 15rem;
+    height: 2rem;
+    font-size: large;
+    background-color: gold;
+    color: black;
+    border-radius: 20px;
+    border-style: none;
+    padding: 0,5rem;
+    margin: 1rem 0;
+    cursor: pointer;
+        &:hover{
+            background: $rojito;
+            color: #fff;
         }
         &:active{
             background-color: $activeColor;
-            color: $colorLetraBoton;
-            border-color: $activeColor;
         }
+    
+}
+#shirt__button{
+    @include buttonShirts();
+}
+
+//=================================================================000
+//============================  shirt 2 button  ======================
+//====================================================================
+
+#shirtII__button{
+
+    @include buttonShirts();
 }
