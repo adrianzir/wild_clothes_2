@@ -1,20 +1,20 @@
 /*========================transition ad=====================*/
 #ad{
-    transition: ease-out 1s 0.2s;
+    transition: ease-out 0.5s 0.2s;
     animation-name: move;
     animation-duration: 2s;
     animation-direction: reverse;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
 
-
-
-
         &:hover{
 
             width: 560px;
             
 
+        }
+        .lorem{
+            text-align: center;
         }
 
 }

@@ -146,23 +146,6 @@ legend{
 /*======================================breakpoint(3)==================================*/
 
 @media  screen and (max-width: 400px) {
-    
-   
-    nav{
-        width: 100%;
-
-
-    }
-    .nav__container{
-                height: fit-content;
-                width: 35%;
-                
-    }
-     #brand{
-                        
-                        margin: 0;
-                       
-                    }
 
    .mainsection{
    display: flex;
@@ -218,23 +201,6 @@ form{
 /*=========================== breakpoint(4) index====================*/
 
 @media  screen and (max-width: 600px) {
-    
-   
-    nav{
-        width: 100%;
-
-    }
-    .nav__container{
-                height: fit-content;
-                width: 35%;
-                
-    }
-     #brand{
-                        
-                        margin: 0;
-                       
-                    }
-
     #ad{
     display: none;
        
@@ -278,10 +244,6 @@ form{
 //============================================================================
 
 @media  screen and (max-width: 850px) {
-   
-    nav{
-        width: 100vw;
-    }
    .mainsection{
    display: flex;
    justify-content: space-around;

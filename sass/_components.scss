@@ -15,7 +15,7 @@ nav{
 
             .nav__container{
                 height: fit-content;
-                width: 15%;
+                width: 18%;
                 background-color: $rojito;
                 padding: 0.25rem;
 
@@ -27,8 +27,8 @@ nav{
                         font-size: xx-large;
                         color: #FFF;
                         font-family: 'Playfair Display', serif;
-                        font-weight: bolder;
-                        margin: 0.25rem;
+                        font-weight: bold;
+                        margin: 0.5rem;
                     }
             }
 
@@ -43,11 +43,17 @@ nav{
             li{
                 list-style: none;
                 margin: 10px;
-        
             }
                 a{
                     text-decoration: none !important;
                     color: #000;
+                    text-transform: capitalize;
+                        
+                    &:hover{
+                        color:$rojito;
+                        padding-bottom: 0.7rem;
+                        border-bottom: solid 1px $rojito;
+                    }
                 }
                 
                  
@@ -71,3 +77,21 @@ nav{
         }
 }
 
+/*=============================================================================*/
+/*=============================  MEDIA QUERY ==================================*/
+/*=============================================================================*/
+
+@media screen and (max-width: 800px){
+     
+    .nav__container{
+        height: fit-content;
+        width: 30%;
+        background-color: $rojito;
+
+        #brand{
+            
+            font-size: large;
+            margin: 0.15rem;
+            }
+        }
+}
