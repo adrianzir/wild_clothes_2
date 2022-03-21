@@ -21,6 +21,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Courgette&family=Gideon+Roman&family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,600;1,900&display=swap"
         rel="stylesheet">
+        <script src="main.js"></script>
 </head>
 
 <body>
@@ -29,13 +30,26 @@
         <div class="nav__container">
             <span id="brand">WILDD</span>
         </div>
-        <ul>
+        <ul class="nav-ul">
             <li><a href="../index.html">home</a> </li>
             <li><a href="clothes.html" target="_self">clothes</a></li>
             <li><a href="help.html" target="_self">help</a></li>
             <li><a href="cart.html" target="_self">cart</a></li>
         </ul>
-    </nav>
+        <div class="burger" onclick="pres()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        </nav>
+        <div class="collapse" id="burger-displayed">
+            <ul class="collapse__ul">
+                <li><a href="../index.html">home</a> </li>
+                <li><a href="html pages/clothes.html" target="_self">clothes</a></li>
+                <li><a href="html pages/help.html" target="_self">help</a></li>
+                <li><a href="html pages/cart.html" target="_self">cart</a></li>
+            </ul>
+        </div>
     <div class="nav__2">
         <input type="text" placeholder="search" id="search__input">
     </div>

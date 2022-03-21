@@ -95,7 +95,7 @@ form{
     padding: 20px 100px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     border-style: outset;
     margin: 10px 100px;
     background-color: white;
@@ -129,8 +129,9 @@ input{
 }
 legend{
     margin: 20px 20px;
-    font-size: x-large;
+    font-size: xx-large;
     font-weight: bolder;
+    font-family: $elegantfont;
 }
 .formulario{
     display: flex;
@@ -138,6 +139,7 @@ legend{
     align-items: center;
     justify-content: center;
     width: 100%;
+    height: 600px;
 }
 
 //======================================================================
@@ -145,7 +147,7 @@ legend{
 //===============================================================0=======
 /*======================================breakpoint(3)==================================*/
 
-@media  screen and (max-width: 400px) {
+@media  screen and (max-width: 400px) and (min-width: 1px) {
 
    .mainsection{
    display: flex;
@@ -161,18 +163,22 @@ legend{
 #cat{
     display: none;
 }
-form{
-    height: auto;
-    width: fit-content;
-    padding: 20px 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    border-style: outset;
-    margin: 10px 2rem;
-    background-color: white;
-    
+.formulario{
+    height: 700px;
+    form{
+        height: auto;
+        width: fit-content;
+        padding: 20px 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-style: outset;
+        margin: 10px 2rem;
+        background-color: white;
+        
+    }
 }
+
 #oferts{                                         
     display: grid;
     width: 100%;
@@ -200,7 +206,7 @@ form{
 }
 /*=========================== breakpoint(4) index====================*/
 
-@media  screen and (max-width: 600px) {
+@media  screen and (max-width: 600px) and (min-width:401px) {
     #ad{
     display: none;
        
@@ -208,7 +214,9 @@ form{
 #cat{
     display: none;
 }
-form{
+.formulario{
+    height: 700px;
+    form{
     height: auto;
     width: fit-content;
     padding: 20px 2rem;
@@ -220,6 +228,8 @@ form{
     background-color: white;
     
 }
+}
+
 #oferts{
     display: grid;
     width: 100%;

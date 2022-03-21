@@ -44,47 +44,5 @@
     font-size: xx-large;
 }
 
-/*_________________________________________________________________________________________
-__________________________________ MEDIA QUERIES____________________________________________*/
-
-    @media screen and (max-width: 1040px){
-    
-    .help__options{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        width: 80%;
-        height: fit-content;
-        padding: 10px;
-    }
-    .help__option__item{
-        padding: 5px;
-        margin: 0;
-        height: 25%;
-        width: fit-content;
-    }
-}   
 
 
- @media screen and (max-width: 600px){
-    .help__container{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 5rem 2rem;}
-            
-        .help__title{
-                text-align: left;
-                padding: 10px;
-                width: 100%;
-        }
-        
-   
-    .help__options{
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 85%;
-        height: fit-content;
-    }
- }

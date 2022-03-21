@@ -1,7 +1,7 @@
 .cart{
     padding-top: 80px;
-    height: 90vh;
-    margin: 0px 10px;
+    height: 100vh;
+    margin: 1rem 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,4 +12,70 @@
     color: orangered;
     padding: 30px;
     border:red solid 3px;
+    margin-top: 20px;
+}
+.footer-cart{
+    height: 50vh;
+}
+
+.carousel-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    margin-bottom: 80px;
+    border-top: gray 1px solid;
+}
+#carouselExampleIndicators{
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    padding: 10%;
+    width: 60%;
+    height: 600px !important;
+    margin: 40px 20%;
+}
+.carousel-control-next, .carousel-control-prev{
+    border-radius: 50%;
+    height: 20%;
+    background-color: #000 !important;
+    opacity: 0.3 !important;
+    top: 130px !important;
+
+}
+.carousel-indicators{
+   top: 600px !important;
+    
+}
+.carousel-inner{
+    display: grid;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+.fontstyle{
+    font-weight: bold;
+    cursor: pointer;
+    font-size: large;
+}
+/*=============================   MEDIA QUERY  =========================================*/
+@media only screen and (max-width:800px) and (min-width:1px){
+    #carouselExampleIndicators{
+    width: 85%;
+    height: 700px !important;
+    margin: 40px;
+}
+.carousel-control-next, .carousel-control-prev{
+    border-radius: 50%;
+    height: 10%;
+    top: 250px !important;
+
+}
+.carousel-control-next{
+    left: 350px;
+}
+.carousel-control-prev{
+    left: 200px;
+}
 }

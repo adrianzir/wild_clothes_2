@@ -42,7 +42,50 @@
 }
 }
 
+/*_________________________________________________________________________________________
+__________________________________ MEDIA QUERIES____________________________________________*/
 
+ @media only screen and (max-width: 800px){
+    .help__container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 5rem 2rem;}
+            
+        .help__title{
+                text-align: left;
+                padding: 10px;
+                width: 100%;
+        }
+        
+   
+    .help__options{
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 85%;
+        height: fit-content;
+           
+    }
+ }
+@media only screen and (max-width: 1100px) and (min-width:801px){
+    
+    .help__options{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: fit-content;
+        height: fit-content;
+        padding: 10px;
 
+    }
+    .help__option__item{
+        padding: 5px;
+        margin: 0;
+        height: 23%;
+        width: 22%;
+    }
+}   
 
 

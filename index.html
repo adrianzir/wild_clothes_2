@@ -21,6 +21,7 @@
         rel="stylesheet">
    
     <title>wildd</title>
+    <script src="../main.js"></script>
 </head>
 <body>
     <header>
@@ -28,13 +29,27 @@
             <div class="nav__container">
                 <span id="brand">WILDD</span>
             </div>
-            <ul>
+            <ul class="nav-ul">
                 <li><a href="index.html">home</a> </li>
                 <li><a href="html pages/clothes.html" target="_self">clothes</a></li>
                 <li><a href="html pages/help.html" target="_self">help</a></li>
                 <li><a href="html pages/cart.html" target="_self">cart</a></li>
             </ul>
+            <div class="burger" onclick="pres()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </nav>
+            
+            <div class="collapse" id="burger-displayed">
+                <ul class="collapse__ul">
+                    <li><a href="index.html">home</a> </li>
+                    <li><a href="html pages/clothes.html" target="_self">clothes</a></li>
+                    <li><a href="html pages/help.html" target="_self">help</a></li>
+                    <li><a href="html pages/cart.html" target="_self">cart</a></li>
+                </ul>
+            </div>
         <div class="nav__2">
             <input type="text" placeholder="search" id="search__input">
         </div>
@@ -80,7 +95,7 @@
 
     <section class="formulario">
     <form >
-        <legend>Contacto, cúentanos en que podemos ayudarte</legend>
+        <legend>Contacto, suscríbete a nuestro Newsletter!</legend>
         <label for="name">Nombre</label>
         <input type="name" placeholder="adrian zambrano">
         <label for="email">Ingresa tu correo electrónico</label>
@@ -107,6 +122,7 @@
             </ul>
         </div>
         </div>
+        <script src="main.js"></script>
     </footer>
    
 </body>

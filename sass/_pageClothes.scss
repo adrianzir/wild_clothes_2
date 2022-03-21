@@ -11,8 +11,7 @@
 }
 @mixin imagen {
     width: 45%;
-    height: 800px;
-    border: solid grey 0.5px;
+    height: 810px;
     padding: 0%;
     display: flex;
     flex-direction: column;
@@ -22,17 +21,20 @@
 .container__1{
     @include imagen();
         .container__1-img{
-            height: inherit;
+            padding:2rem 0 ;
+            height: 93%;
 
         }
 }
 .container__2 {
     @include imagen();
-         .container__2-img{
-            height: inherit;
+}
+ .container__2-img{
+            padding:2rem 0 ;
+            height: 100%;
 
         }
-}
+
 
 
 /*=============================================================================*/
@@ -54,7 +56,7 @@
     height: 500px;
     padding: 0%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 .container__2{
@@ -62,8 +64,13 @@
     height: 500px;
     padding: 0%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+        .container__2-img{
+            width: 100%;
+
+        }
 }
 .container__2__button {
     height: 90px;
