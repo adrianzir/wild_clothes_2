@@ -51,7 +51,7 @@
 .carousel-inner{
     display: grid;
     justify-content: space-around;
-    width: 100%;
+    width: 90%;
     
 }
 .fontstyle{
@@ -74,8 +74,5 @@
 }
 .carousel-control-next{
     left: 350px;
-}
-.carousel-control-prev{
-    left: 200px;
 }
 }

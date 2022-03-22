@@ -14,18 +14,19 @@ nav{
     background-color: #FFF;
 
             .nav__container{
-                height: 55px;
+                height: 50px;
                 width: 18%;
                 background-color: $rojito;
                 padding: 0.25rem 0;
                 display: flex;
-                justify-content: space-around;
-                
+                flex-direction: row;
+                justify-content:space-around;
+                align-items: center;
 
                     #brand{
                         width: fit-content;
                         height: fit-content;
-                        font-size: xx-large;
+                        font-size: 100%;
                         color: #FFF;
                         font-family: 'Playfair Display', serif;
                         font-weight: bold;
@@ -89,19 +90,24 @@ nav{
 /*=============================================================================*/
 
 @media only screen and (max-width: 800px) and (min-width: 1px){
-        
+        .burger-boots{
+            padding: 0.1rem;
+            display: flex;
+            height: 50px;
+
+            .bg{
+                background-color: grey;
+                margin: 0.20rem;
+                height: 3px;
+                width: 80%;
+                border-radius: 10px;
+            }    
+
+        }
         .nav__container{
             width: 30%;
             height: 35px;
-            display: flex;
-            vertical-align: middle;
-            #brand{
-                        width: 90%;
-                        height: fit-content;
-                        font-size: x-large;
-                        color: #FFF;
-                        font-family: 'Playfair Display', serif;
-                        font-weight: bold;
+            #brand{ 
                         margin: 0.2rem;
                     }
         }
