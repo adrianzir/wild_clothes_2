@@ -1374,4 +1374,152 @@ footer .footer__div1 div ul li {
     left: 350px;
   }
 }
+
+.sells-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.clothes_division {
+  width: 70%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 100px 0;
+}
+
+.clothes_card {
+  display: inline-block;
+  padding: 20px 25px;
+  margin: 20px;
+  height: 544px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-transition: 3s background-color 1s ease-in;
+  transition: 3s background-color 1s ease-in;
+  cursor: pointer;
+  border: 1px grey solid;
+}
+
+.clothes_card:hover {
+  -webkit-box-shadow: 5px 10px 100px lightgrey, 10px 10px 10px black;
+          box-shadow: 5px 10px 100px lightgrey, 10px 10px 10px black;
+  height: 548px;
+}
+
+.clothes_card:hover .pic-1 {
+  width: 355px;
+}
+
+.pic-1 {
+  border: 1px black solid;
+  width: 350px;
+  height: 400px;
+}
+
+.clothes_card > p {
+  color: #f83303;
+  font-size: x-large;
+  font-weight: bolder;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  margin: 1rem 0;
+  padding: 0.75rem 0.25rem;
+  border-bottom: #f83303 2px solid;
+}
+
+.clothes_card > del, span {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+/*====================================  Aside  ========================================*/
+.aside {
+  height: auto;
+  width: 30%;
+  margin-top: 100px;
+}
+
+.aside .aside_content {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aside .aside_content .aside_heading {
+  font-size: xxx-large;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
+  margin: 1rem 0;
+}
+
+.aside .aside_content .aside__ul {
+  margin: 1rem;
+  -webkit-box-shadow: 5px 5px 10px lightgrey;
+          box-shadow: 5px 5px 10px lightgrey;
+  width: 100%;
+}
+
+.aside .aside_content .aside__ul .aside__ul-item {
+  text-transform: uppercase;
+  margin: 1rem;
+  font-size: large;
+  list-style: none;
+  color: grey;
+  font-weight: 600;
+  padding: 1rem 0;
+  border-bottom: 1px dotted #f83303;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 790px) and (min-width: 1px) {
+  .sells-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sells-section .aside {
+    width: 100%;
+    text-align: center;
+  }
+  .sells-section .aside .aside__ul {
+    -webkit-box-shadow: 5px 5px 5px lightgrey, 3px 2px 5px grey;
+            box-shadow: 5px 5px 5px lightgrey, 3px 2px 5px grey;
+  }
+  .sells-section .clothes_division {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
