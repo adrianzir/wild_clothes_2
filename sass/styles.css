@@ -383,7 +383,7 @@ nav {
   font-size: 120%;
   width: 100%;
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1030,7 +1030,9 @@ __________________________________ MEDIA QUERIES________________________________
 footer {
   background-color: black;
   color: blanchedalmond;
-  height: 15rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
   text-align: center;
 }
@@ -1054,6 +1056,7 @@ footer .footer__div1 p {
 
 footer .footer__div1 div p {
   font-weight: 900;
+  margin: 1rem 0;
 }
 
 footer .footer__div1 div ul {
@@ -1069,6 +1072,59 @@ footer .footer__div1 div ul {
 footer .footer__div1 div ul li {
   list-style: none;
   margin: 0.75rem 0 0.5rem 0;
+}
+
+footer .footer__div1 .social__media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (max-width: 600px) and (min-width: 1px) {
+  footer {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  footer .footer__div1 {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "media" "media" "rights";
+    gap: 1rem;
+    padding: 2rem;
+  }
+  footer .footer__div1 .footer__div1-rights {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: rights;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin: 2rem 0 1rem 0;
+  }
+  footer .footer__div1 .social__media {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: media;
+    border-right: #fff 1px solid;
+    padding-right: 1rem;
+  }
+  footer .footer__div1 .div_footer__div1-contact {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: media;
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-end: 4;
+  }
 }
 
 .container {
@@ -1405,17 +1461,24 @@ footer .footer__div1 div ul li {
 }
 
 .clothes_card {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 20px 25px;
   margin: 20px;
   height: 544px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  -webkit-transition: 3s background-color 1s ease-in;
-  transition: 3s background-color 1s ease-in;
+  max-width: 368px;
+  -webkit-transition: 0.2s ease-in;
+  transition: 0.2s ease-in;
   cursor: pointer;
-  border: 1px grey solid;
+  border: 1px lightgrey solid;
 }
 
 .clothes_card:hover {
@@ -1429,7 +1492,7 @@ footer .footer__div1 div ul li {
 }
 
 .pic-1 {
-  border: 1px black solid;
+  border: 1px lavender solid;
   width: 350px;
   height: 400px;
 }
@@ -1449,6 +1512,19 @@ footer .footer__div1 div ul li {
 .clothes_card > del, span {
   display: block;
   margin: 0.5rem 0;
+}
+
+#green_sweater .special-pic2, #orange-j .special-pic2 {
+  z-index: 1;
+}
+
+#green_sweater .special-pic, #orange-j .special-pic {
+  z-index: 0.5;
+  position: absolute;
+}
+
+#green_sweater:hover .special-pic, #orange-j:hover .special-pic {
+  z-index: 2;
 }
 
 /*====================================  Aside  ========================================*/
@@ -1498,9 +1574,20 @@ footer .footer__div1 div ul li {
   list-style: none;
   color: grey;
   font-weight: 600;
-  padding: 1rem 0;
+  padding: 1rem;
   border-bottom: 1px dotted #f83303;
   cursor: pointer;
+  border-radius: 10px;
+}
+
+.aside .aside_content .aside__ul .aside__ul-item:hover {
+  background-color: #f83303;
+  opacity: 0.5;
+  color: #fff;
+}
+
+.aside .aside_content .aside__ul .aside__ul-item:active {
+  opacity: 1;
 }
 
 @media only screen and (max-width: 790px) and (min-width: 1px) {
