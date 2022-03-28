@@ -559,6 +559,12 @@ nav a:hover {
   #burger-displayed {
     display: none;
   }
+  .close {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+  }
   .collapse__ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -788,6 +794,13 @@ nav a:hover {
 
 #shirtII__button:active {
   background-color: #3df4fa;
+}
+
+.button_x {
+  height: 1rem;
+  color: grey;
+  margin: 1rem;
+  cursor: pointer;
 }
 
 .dad {

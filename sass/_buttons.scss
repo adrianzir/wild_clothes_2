@@ -91,3 +91,11 @@
 
     @include buttonShirts();
 }
+
+// =========================  NAV CLOSE BUTTON   ===========================//
+.button_x{
+    height: 1rem;
+    color: grey;
+    margin: 1rem;
+    cursor: pointer;
+}
