@@ -50,7 +50,7 @@
 /*_________________________________________________________________________________________
 __________________________________ MEDIA QUERIES____________________________________________*/
 
- @media only screen and (max-width: 800px){
+ @media only screen and (max-width: 800px) and (min-width:1px){
     .help__container{
         display: flex;
         justify-content: center;
@@ -69,8 +69,17 @@ __________________________________ MEDIA QUERIES________________________________
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 85%;
+        width: 90%;
+        margin: 2rem 0.5rem;
         height: fit-content;
+        .help__option__item{
+            width: 85%;
+            height: fit-content;
+
+            p{
+                font-size: medium;
+            }
+        }
     }
  }
 @media only screen and (max-width: 1100px) and (min-width:801px){

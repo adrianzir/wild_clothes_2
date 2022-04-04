@@ -979,7 +979,7 @@ nav a:hover {
 
 /*_________________________________________________________________________________________
 __________________________________ MEDIA QUERIES____________________________________________*/
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) and (min-width: 1px) {
   .help__container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1009,10 +1009,20 @@ __________________________________ MEDIA QUERIES________________________________
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 90%;
+    margin: 2rem 0.5rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .help__options .help__option__item {
     width: 85%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+  }
+  .help__options .help__option__item p {
+    font-size: medium;
   }
 }
 
