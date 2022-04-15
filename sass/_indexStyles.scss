@@ -45,42 +45,60 @@
  ================================= SHIRT OFERTS SECTION  ============================================
  ====================================================================================================*/
 .shirt {
-    display: inline-block;
-    padding: 20px 25px;
+    display: flex;
+    padding: 20px 40px 40px 40px;
     margin: 30px;
     height: auto;
-    width: auto;
+    width: 280px;
     transition: 3s background-color 1s ease-in;
     cursor: pointer;
     border: 1px grey solid;
+    box-shadow: 3px 3px 10px;
+    flex-direction: column;
+    align-items: center;
 }
 .pic{
     border: 1px black solid;
+    opacity: .7;
+    transition: transform .75s;  
+    width: 90%;
+    
 }
-.shirt> p{
-    color: #F83303;
-    font-size: x-large;
-    font-weight: bolder;
-    text-transform: capitalize;
-    font-family:Arial, Helvetica, sans-serif;
-    background-color: white;
-    margin: 1rem 0;
-    padding: 0.75rem 0.25rem;
-    border-bottom: #F83303 2px solid;
-}
-.shirt>del ,span{
-    display: block;
-    margin: 0.5rem 0;
+.wrapping{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;
+    flex-wrap: wrap;
+    height: auto;
+    p {
+        width: 100%;
+        color: #F83303;
+        font-size: x-large;
+        font-weight: bolder;
+        text-transform: capitalize;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: white;
+        margin: 1rem 0;
+        padding: 0.75rem 0.25rem;
+        border-bottom: #F83303 2px solid;
+    }
+    del,
+    span {
+        display: block;
+        margin: 0.5rem 0;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+        width: fit-content;
+    }
 
 }
-
-
 .pic:hover {
-    height: 350px ;
-    width: 350px ;
+    transform: scale(1.12);
+    opacity: 1;
 }
 #oferts{
-    padding: 10px 100px;
+    padding: 10px 10%;
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
@@ -167,7 +185,7 @@ legend{
     height: 700px;
     form{
         height: auto;
-        width: fit-content;
+        width: 90%;
         padding: 20px 2rem;
         display: flex;
         flex-direction: column;
@@ -180,24 +198,18 @@ legend{
 }
 
 #oferts{                                         
-    display: grid;
-    width: 100%;
-    grid-template-rows: 1fr 1fr;
-    grid-column: 2fr;
+    display: flex;
+    max-width: 100vw;
     height: auto;
-    padding: 0;
+    padding: 50px 10px;
     justify-content: center;
-    align-items: center;
-     grid-template-areas: div1
-                         div2  ;
+    flex-direction: row;
 }
 #eagle{
     grid-area: div1;
+    width: 50%;
+    margin: 0;
 }
-#cat{
-    grid-area: div2;
-}
-
 .help__container{
     padding-top: 130px;
     height: fit-content;
@@ -231,19 +243,17 @@ legend{
 }
 
 #oferts{
-    display: grid;
+    display: flex;
     width: 100%;
-    grid-template-rows: 1fr 1fr;
-    grid-column: 2fr;
     height: auto;
     padding: 0;
     justify-content: center;
-    align-items: center;
-     grid-template-areas: div1
-                         div2  ;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 #eagle{
     grid-area: div1;
+    width: 80%;
 }
 #cat{
     grid-area: div2;
@@ -253,7 +263,7 @@ legend{
 }
 //============================================================================
 
-@media  screen and (max-width: 850px) {
+@media  screen and (max-width: 850px) and (min-width: 601px){
    .mainsection{
    display: flex;
    justify-content: space-around;
@@ -286,7 +296,7 @@ legend{
 }
 }
 /*=============================================== breakpoint(1) ===========================================*/
-@media  screen and (max-width: 1100px) {
+@media  screen and (max-width: 1100px) and (min-width: 851px){
     #oferts{
     display: grid;
     width: 100%;
@@ -295,5 +305,7 @@ legend{
     height: auto;
     padding: 0;
 }
-    
+   #ad{
+       display: none;
+   } 
 }

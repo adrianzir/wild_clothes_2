@@ -32,29 +32,5 @@
     }
     
 }
-@keyframes gradient{
-    0%{
-        background-color: white;
-        border-radius: 1%;
-    }
-    50%{
-        background-color: #b4b0af;
-        border-radius: 6%;
-        color: darkgrey;
-    }
-    100%{
-        background-color: #2d2d2ec9;
-        border-radius: 10%;
-        color: white;
-    }
-}
-.shirt:hover{
-    animation-name: gradient;
-    animation-duration: 2s;
-    animation-direction:normal;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-delay: 0.25s;
 
-}
 
