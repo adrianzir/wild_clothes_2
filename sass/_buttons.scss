@@ -1,28 +1,33 @@
 /*========================= cart buttons =================================00*/
 
 .button__div{
-    width: 500px;
+    width: 300px;
     display: flex;
     justify-content: center;
-}
-.cart__button{
-    background-color: $rojito !important;
-    width: 200px;
-
-        a{
+    height: 3rem;
+    margin-top: 20px;
+    a {
+        width: 100%;
+        height: 100%;
+        .cart__button {
+            background-color: $rojito;
+            font-size: larger;
+            font-family: $boldfont;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 20px;
+            width: 100%;
             text-decoration: none;
-            color: #fff !important;
-
-                &:hover{
-                    color: $activeColor;
-                }
-
+            color: #fff;
+            height: 100%;
+            &:hover {
+                opacity: 0.85;
+                cursor: pointer;
+            }
         }
-
-        &:hover{
-            background-color: gold;
-        }
+    }
 }
+
 
 
 /*========================= clothes buttons =================================00*/
@@ -92,10 +97,3 @@
     @include buttonShirts();
 }
 
-// =========================  NAV CLOSE BUTTON   ===========================//
-.button_x{
-    height: 1rem;
-    color: grey;
-    margin: 1rem;
-    cursor: pointer;
-}

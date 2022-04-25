@@ -231,6 +231,15 @@ legend {
   height: 600px;
 }
 
+.emptyInput {
+  border: 1px solid red;
+  content: "este campo debe completarse";
+}
+
+.inputaccepted {
+  border: 1px solid lightgreen;
+}
+
 /*======================================breakpoint(3)==================================*/
 @media screen and (max-width: 400px) and (min-width: 1px) {
   .mainsection {
@@ -431,6 +440,7 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #FFF;
+  border-bottom: lightgray solid 1px;
 }
 
 nav .nav__container {
@@ -480,6 +490,7 @@ nav ul {
       -ms-flex-pack: right;
           justify-content: right;
   margin-right: 20px;
+  margin-left: auto;
 }
 
 nav li {
@@ -521,32 +532,34 @@ nav a:hover {
   border-radius: 1rem;
 }
 
-.burger {
+.shut-burger, .collapse__ul-shutted, .collapse__ul {
   display: none;
 }
 
-.collapse__ul {
-  display: none;
+.spanStyles {
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: "Montserrat", sans-serif;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0 2rem;
+  color: #111112;
+  width: 20px;
+  padding: 1rem;
+  border: #fff 3px solid;
+}
+
+.spanStyles:hover {
+  color: #f83303;
+  cursor: pointer;
+  border: 3px solid #f83303;
 }
 
 /*=============================================================================*/
 /*=============================  MEDIA QUERY ==================================*/
 /*=============================================================================*/
 @media only screen and (max-width: 800px) and (min-width: 1px) {
-  .burger-boots {
-    padding: 0.1rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 50px;
-  }
-  .burger-boots .bg {
-    background-color: grey;
-    margin: 0.20rem;
-    height: 3px;
-    width: 80%;
-    border-radius: 10px;
-  }
   .nav__container {
     width: 30%;
     height: 35px;
@@ -595,15 +608,6 @@ nav a:hover {
     background-color: grey;
     margin: 0.40rem 0.10rem;
     border-radius: 10px;
-  }
-  #burger-displayed {
-    display: none;
-  }
-  .close {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: 100%;
   }
   .collapse__ul {
     display: -webkit-box;
@@ -689,31 +693,38 @@ nav a:hover {
 
 /*========================= cart buttons =================================00*/
 .button__div {
-  width: 500px;
+  width: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 3rem;
+  margin-top: 20px;
 }
 
-.cart__button {
-  background-color: #f83303 !important;
-  width: 200px;
+.button__div a {
+  width: 100%;
+  height: 100%;
 }
 
-.cart__button a {
+.button__div a .cart__button {
+  background-color: #f83303;
+  font-size: larger;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 20px;
+  width: 100%;
   text-decoration: none;
-  color: #fff !important;
+  color: #fff;
+  height: 100%;
 }
 
-.cart__button a:hover {
-  color: #3df4fa;
-}
-
-.cart__button:hover {
-  background-color: gold;
+.button__div a .cart__button:hover {
+  opacity: 0.85;
+  cursor: pointer;
 }
 
 /*========================= clothes buttons =================================00*/
@@ -785,13 +796,6 @@ nav a:hover {
 
 #shirtII__button:active {
   background-color: #3df4fa;
-}
-
-.button_x {
-  height: 1rem;
-  color: grey;
-  margin: 1rem;
-  cursor: pointer;
 }
 
 .dad {
@@ -1099,6 +1103,11 @@ footer .footer__div1 .social__media {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+i {
+  font-size: x-large;
+  margin-bottom: 1.25rem;
 }
 
 @media only screen and (max-width: 600px) and (min-width: 1px) {

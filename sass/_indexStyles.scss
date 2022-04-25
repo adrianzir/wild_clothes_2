@@ -160,6 +160,13 @@ legend{
     width: 100%;
     height: 600px;
 }
+.emptyInput{
+    border: 1px solid red;
+    content: "este campo debe completarse";
+}
+.inputaccepted{
+    border: 1px solid lightgreen;
+}
 
 //======================================================================
 //===================== MEDIA QUERIES===================================

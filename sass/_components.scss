@@ -12,6 +12,7 @@ nav{
     display: flex;
     justify-content: space-between;
     background-color: #FFF;
+    border-bottom: lightgray solid 1px;
 
             .nav__container{
                 height: 50px;
@@ -40,6 +41,7 @@ nav{
               flex-direction: row;
               justify-content: right;
               margin-right: 20px;
+              margin-left: auto;
         }
 
             li{
@@ -78,83 +80,75 @@ nav{
 
         }
 }
-.burger{
+.shut-burger, .collapse__ul-shutted, .collapse__ul{
     display: none;
 }
-.collapse__ul{
-    display: none;
-}
+// clase con estilos para la X que cierra el menu responsive
+.spanStyles{
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: $boldfont;
+    height: fit-content;
+    margin: 0 2rem;
+    color: #111112;
+    width: 20px;
+    padding: 1rem;
+    border: #fff 3px solid;
+    &:hover{
+        color: $rojito;
+        cursor: pointer;
+        border: 3px solid $rojito;
 
+    }
+}
 /*=============================================================================*/
 /*=============================  MEDIA QUERY ==================================*/
 /*=============================================================================*/
 
 @media only screen and (max-width: 800px) and (min-width: 1px){
-        .burger-boots{
-            padding: 0.1rem;
-            display: flex;
-            height: 50px;
+    .nav__container{
+        width: 30%;
+        height: 35px;
+        #brand{ 
+            margin: 0.2rem;
+        }
+    }
+    .nav-ul{
+        display: none;
+    }
+    .burger{
+        width: 4rem;
+        height: 3rem;
+        border: white 3px solid;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 0.5rem 0;
+        margin: 0 2rem;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover{
+            border-color: $rojito;
+                .line{
+                    background-color: $rojito;
+                }
+        }
+            &:select{
+            border-color: $rojito;
+                .line{
+                    background-color: $rojito;
+                }
+        }
 
-            .bg{
-                background-color: grey;
-                margin: 0.20rem;
+            .line{
                 height: 3px;
                 width: 80%;
+                background-color: grey;
+                margin: 0.40rem 0.10rem ;
                 border-radius: 10px;
-            }    
-
-        }
-        .nav__container{
-            width: 30%;
-            height: 35px;
-            #brand{ 
-                        margin: 0.2rem;
-                    }
-        }
-    
-        .nav-ul{
-            display: none;
-        }
-        .burger{
-            width: 4rem;
-            height: 3rem;
-            border: white 3px solid;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            background-color: #fff;
-            padding: 0.5rem 0;
-            margin: 0 2rem;
-            border-radius: 5px;
-            cursor: pointer;
-            &:hover{
-                border-color: $rojito;
-                 .line{
-                     background-color: $rojito;
-                 }
-            }
-             &:select{
-                border-color: $rojito;
-                 .line{
-                     background-color: $rojito;
-                 }
             }
 
-                .line{
-                    height: 3px;
-                    width: 80%;
-                    background-color: grey;
-                    margin: 0.40rem 0.10rem ;
-                    border-radius: 10px;
-                }
-
-        }
-        #burger-displayed{
-            display: none;
-        }
-    .close{
-        height: fit-content;
-        width: 100%;
     }
     .collapse__ul{
         display: flex;

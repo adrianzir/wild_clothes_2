@@ -20,7 +20,6 @@
         rel="stylesheet">
    
     <title>wildd</title>
-    <script src="../main.js"></script>
 </head>
 <body>
     <header>
@@ -34,15 +33,14 @@
                 <li><a href="html pages/help.html" target="_self">help</a></li>
                 <li><a href="html pages/cart.html" target="_self">cart</a></li>
             </ul>
-            <div class="burger" onclick="pres()">
+            <div class="burger">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
         </nav>
             
-            <div class="collapse" id="burger-displayed">
-                  
+            <div class="div__collapse">  
                 <ul class="collapse__ul">
                     <li><a href="index.html">home</a> </li>
                     <li><a href="html pages/clothes.html" target="_self">clothes</a></li>
@@ -50,6 +48,7 @@
                     <li><a href="html pages/cart.html" target="_self">cart</a></li>
                 </ul>
             </div>
+
         <div class="nav__2">
             <input type="text" placeholder="search" id="search__input">
         </div>
@@ -101,37 +100,38 @@
     <form >
         <legend>Contacto, suscríbete a nuestro Newsletter!</legend>
         <label for="name">Nombre</label>
-        <input type="name" placeholder="adrian zambrano">
+        <input type="name" class="name" placeholder="adrian zambrano">
         <label for="email">Ingresa tu correo electrónico</label>
-        <input type="email" placeholder="adriansomething@gmail.com">
+        <input type="email" class="email" placeholder="adriansomething@gmail.com">
         <label for="date">Fecha de nacimiento</label>
-        <input type="date" name="fecha" id="date">
-        <label for="text">Comenta</label>
-        <input type="textarea" placeholder="...">
-        <input type="submit" title="enviar" id="send">
+        <input type="date" class="age" id="date">
 
+        <input type="submit" title="enviar" id="send">
     </form>
     </section>
 <!---------------------------------footer--------------------------------------->
-    <footer class="footer">
-        <div class="footer__div1">
-        <div class="social__media">
-            <p class="footer__div1-coment">Siguenos en redes sociales</p>
-            <i class="fa-brands fa-regular fa-instagram"></i>
-            <i class="fa-brands fa-regular fa-facebook"></i>
-            <i class="fa-brands fa-regular fa-whatsapp"></i>
-        </div>
-        <p class="footer__div1-rights">Derechos reservados</p>
-        <div class="div_footer__div1-contact">
-            <p class="footer__div1-contact">Contacto</p>
-            <ul>
-                <li>Nuestras Tiendas</li>
-                <li>+56 945 678 123</li>
-                <li>contacto@wilddclothing.com</li>
-            </ul>
-        </div>
-        </div>
-    </footer>
-   
+<footer class="footer">
+    <div class="footer__div1">
+    <div class="social__media">
+        <p class="footer__div1-coment">Siguenos en redes sociales</p>
+        <i class=" fa fa-brands fa-regular fa-instagram"></i>
+        <i class=" fa fa-brands fa-regular fa-facebook"></i>
+        <i class="fa fa-brands fa-regular fa-whatsapp"></i>
+    </div>
+    <p class="footer__div1-rights">Derechos reservados</p>
+    <div class="div_footer__div1-contact">
+        <p class="footer__div1-contact">Contacto</p>
+        <ul>
+            <li>Nuestras Tiendas</li>
+            <li>+56 945 678 123</li>
+            <li>contacto@wilddclothing.com</li>
+        </ul>
+    </div>
+    </div>
+</footer>
+<!---
+    |--------------------------   SCRIPTS   --------------------------|
+---->
+<script src="js/index.js"></script>
 </body>
 </html>

@@ -37,6 +37,10 @@ footer{
             }
         }
 }
+i{
+    font-size: x-large;
+    margin-bottom: 1.25rem;
+}
 @media only screen and(max-width:600px) and (min-width:1px){
     footer{
         height: fit-content;
