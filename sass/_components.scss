@@ -71,13 +71,26 @@ nav{
     z-index: 0;
     position:relative;
     top: 90px;
-        
+     
         #search__input{
-            width: 28rem;
+            width: 40%;
             margin: 1rem 0rem;
             padding: 0.5rem;
             border-radius: 1rem;
-
+            text-align: left;
+        }
+        .icon-search{
+            fill: $rojito;
+            margin: calc(70px/2 - 0.5rem) 0;
+            border-radius: 20%;
+            font-size: small;
+            height: 1.5rem;
+            width: 2.5rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            cursor: pointer;
         }
 }
 .shut-burger, .collapse__ul-shutted, .collapse__ul{
@@ -155,8 +168,9 @@ nav{
         flex-direction: column;
         background-color: #FFF;
         width: 100%;
-        position: relative;
-        top: 80px;
+        position: fixed;
+        top: 91px;
+        z-index: 3;
             li{
                 height: 2rem;
                 margin: 0.5rem;
@@ -176,6 +190,5 @@ nav{
                 }
             }
     }
-
 
 }

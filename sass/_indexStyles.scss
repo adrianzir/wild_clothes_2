@@ -114,37 +114,26 @@ form{
     padding: 20px 100px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     border-style: outset;
     margin: 10px 100px;
     background-color: white;
-    
+    align-items: center;
 }
 label{
     margin: 10px ;
     font-size: larger;
+    font-weight: bolder;
 
 }
 input{
     margin: 10px;
-    height: 20px;
-    width: 50%;
+    height: 25px;
+    width: 100%;
     padding:3px;
-    border-style: solid;
-    border-bottom-color: #F83303 ;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-}
-#send{
-    width: 80px;
-    height: 30px;
-    padding: 5px 8px;
-    border: thin gray;
-    background-color: honeydew;
-}
-#send:hover{
-    background-color: rgb(176, 189, 176);
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    border-bottom: $rojito 2px solid;
+    text-align: center;
 }
 legend{
     margin: 20px 20px;

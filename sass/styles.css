@@ -173,41 +173,29 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   border-style: outset;
   margin: 10px 100px;
   background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 label {
   margin: 10px;
   font-size: larger;
+  font-weight: bolder;
 }
 
 input {
   margin: 10px;
-  height: 20px;
-  width: 50%;
+  height: 25px;
+  width: 100%;
   padding: 3px;
-  border-style: solid;
-  border-bottom-color: #F83303;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-
-#send {
-  width: 80px;
-  height: 30px;
-  padding: 5px 8px;
-  border: thin gray;
-  background-color: honeydew;
-}
-
-#send:hover {
-  background-color: #b0bdb0;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  border-bottom: #f83303 2px solid;
+  text-align: center;
 }
 
 legend {
@@ -526,10 +514,34 @@ nav a:hover {
 }
 
 .nav__2 #search__input {
-  width: 28rem;
+  width: 40%;
   margin: 1rem 0rem;
   padding: 0.5rem;
   border-radius: 1rem;
+  text-align: left;
+}
+
+.nav__2 .icon-search {
+  fill: #f83303;
+  margin: calc(70px/2 - 0.5rem) 0;
+  border-radius: 20%;
+  font-size: small;
+  height: 1.5rem;
+  width: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
 }
 
 .shut-burger, .collapse__ul-shutted, .collapse__ul {
@@ -619,8 +631,9 @@ nav a:hover {
             flex-direction: column;
     background-color: #FFF;
     width: 100%;
-    position: relative;
-    top: 80px;
+    position: fixed;
+    top: 91px;
+    z-index: 3;
   }
   .collapse__ul li {
     height: 2rem;
@@ -691,7 +704,7 @@ nav a:hover {
   }
 }
 
-/*========================= cart buttons =================================00*/
+/*========================= cart button =================================00*/
 .button__div {
   width: 300px;
   display: -webkit-box;
@@ -776,6 +789,9 @@ nav a:hover {
   background-color: #3df4fa;
 }
 
+/*====================================================================
+  |                          shirt 2 button                          |
+  ====================================================================*/
 #shirtII__button {
   width: 15rem;
   height: 2rem;
@@ -795,6 +811,32 @@ nav a:hover {
 }
 
 #shirtII__button:active {
+  background-color: #3df4fa;
+}
+
+/*
+  ====================================================================
+  |                       FORMULARIO DEL INDEX                        |
+  ====================================================================
+  */
+#send {
+  background-color: #f83303;
+  font-size: large;
+  font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
+  border-radius: 10px;
+  width: 10rem;
+  color: #fff;
+  height: 2rem;
+  padding: 5px 8px;
+}
+
+#send:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+#send:active {
   background-color: #3df4fa;
 }
 

@@ -52,5 +52,32 @@ function nameValidation(){
 submit.addEventListener("click", (e)=>{
     e.preventDefault();
     nameValidation();
-    alert(`bienvenido ${nombre.value}, recibiras notificaciones al correo: ${email.value}`)
+    alert(`bienvenido ${nombre.value}, ahora recibiras notificaciones de nuestras actualizaciones, ofertas, productos y demas, al correo: ${email.value}`)
 })
+/*
+    ----------------------------------------
+    |  VARIABLES PARA LOS OBJETOS/CLOTHES  |
+    ----------------------------------------
+*/
+class Ropa{
+    constructor(productName, productPrice, qty){
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.qty = qty;
+    }
+}
+
+// const producto1 = new Ropa();
+// const producto2 = new Ropa();
+// const producto3 = new Ropa();
+// const producto4 = new Ropa();
+// const producto5 = new Ropa();
+// const producto6 = new Ropa();
+// const producto7 = new Ropa();
+// const producto8 = new Ropa();
+// const producto9 = new Ropa();
+// const producto10 = new Ropa();
+// const producto11 = new Ropa();
+// const producto12 = new Ropa();
+// const producto13 = new Ropa();
+// const producto14 = new Ropa();
