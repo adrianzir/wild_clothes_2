@@ -79,19 +79,30 @@ nav{
             border-radius: 1rem;
             text-align: left;
         }
+        #lupa{
+            all: unset;
         .icon-search{
             fill: $rojito;
-            margin: calc(70px/2 - 0.5rem) 0;
-            border-radius: 20%;
+            margin: calc(70px/2 - .9rem) 0;
+            border-radius: 50%;
             font-size: small;
-            height: 1.5rem;
+            height: 2rem;
             width: 2.5rem;
+            padding: .30rem .25rem;
             display: flex;
+            opacity: .6;
             align-items: center;
             flex-direction: column;
             justify-content: center;
             cursor: pointer;
+            &:hover{
+                opacity: 1;
+            }
+            &:active{
+                fill: gold;
+            }
         }
+    }
 }
 .shut-burger, .collapse__ul-shutted, .collapse__ul{
     display: none;

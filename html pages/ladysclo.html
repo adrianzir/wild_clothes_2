@@ -46,17 +46,33 @@
     </div>
     <div class="nav__2">
         <input type="text" placeholder="search" id="search__input">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon-search" viewBox="0 0 512 512">
-            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-            <path
-                d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" />
-        </svg>
+        <button type="submit" id="lupa"><svg xmlns="http://www.w3.org/2000/svg" class="icon-search" viewBox="0 0 512 512">
+                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                    d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" />
+            </svg></button>
     </div>
     </header>
     
     <!--///////////////////////////////// BODY OF THE PAGE ////////////////////////////////////////////////-->
 <section class="sells-section">
     <aside class="aside">
+        <article class="aside__filters">
+            <h2>filters</h2>
+            <div class="filtro__precio">
+                <h5>Filter for prices</h5>
+                <label for="mayor">highest to lowest</label>
+                <input type="checkbox" name="mayor">
+                <label for="menor">lowest to highest</label>
+                <input type="checkbox" name="menor">
+                <button type="submit"></button>
+            </div>
+            <div class="filtro__nombre">
+                <h5>Filter for name</h5>
+
+        
+            </div>
+        </article>
         <div class="aside_content">
             <h3 class="aside_heading">New season discounts</h3>
             <ul class="aside__ul">
@@ -73,47 +89,75 @@
         </div>
     </aside>
     <div class="clothes_division">
-        <div class="clothes_card">
+        <div class="clothes_card" id="producto-9">
         
             <img src="../images/2022-03-20_17h24_54.png" alt="croptop" class="pic-1">
-            <p><a href="html pages/shirt.html" target="_self">Yellow top women oval design</a></p>
+            <div class="card__details">
+            <p><a href="#" target="_self">Yellow top women oval design</a></p>
             <span>$6.999</span>
-        
+            </div>
+            <div class="cards__div-button">
+                <a href="#"><button class="cards__button" type="button">Add to cart</button></a>
+            </div>
         </div>
-        <div class="clothes_card">
+        <div class="clothes_card" id="producto-10">
             <img src="../images/2022-03-20_17h23_04.png" alt="pants" class="pic-1">
-            <p><a href="html pages/shirt2.html">grey fashion pants</a></p>
+            <div class="card__details">
+            <p><a href="#">grey fashion pants</a></p>
             <del>$12.999</del>
             <span>$9.900</span>
+            </div>
+            <div class="cards__div-button">
+                <a href="#"><button class="cards__button" type="button">Add to cart</button></a>
+            </div>
         </div>
-        <div class="clothes_card">
+        <div class="clothes_card" id="producto-11">
         
             <img src="../images/2022-03-20_17h20_40.png" alt="colorjacket" class="pic-1">
-            <p><a href="html pages/shirt.html" target="_self">color squared coat</a></p>
+            <div class="card__details">
+            <p><a href="#" target="_self">color squared coat</a></p>
             <del>$38.699</del>
             <span>$35.999</span>
+            </div>
+            <div class="cards__div-button">
+                <a href="#"><button class="cards__button" type="button">Add to cart</button></a>
+            </div>
         
         </div>
         <div class="clothes_card" id="green_sweater">
             <img src="../images/2022-03-20_17h19_47.png" alt="sweater" class="pic-1 special-pic2" >
             <img src="../images/2022-03-20_17h19_59.png" alt="sweater" class="pic-1 special-pic">
-            <p><a href="html pages/shirt2.html">sweater rounded neck green</a></p>
+            <div class="card__details">
+            <p><a href="#">sweater rounded neck green</a></p>
             <del>$17.500</del>
             <span>$14.990</span>
+            </div>
+            <div class="cards__div-button">
+                <a href="#"><button class="cards__button" type="button">Add to cart</button></a>
+            </div>
         </div>
             
-        <div class="clothes_card">
+        <div class="clothes_card" id="producto-13">
                 <img src="../images/2022-03-20_17h27_24.png" alt="coat" class="pic-1">
-                <p><a href="html pages/shirt.html" target="_self">burdeo women windbreaker</a></p>
+                <div class="card__details">
+                <p><a href="#" target="_self">burdeo women windbreaker</a></p>
                 <del>$28.990</del>
                 <span>$25.690</span>
-            
+                </div>
+                <div class="cards__div-button">
+                    <a href="#"><button class="cards__button" type="button">Add to cart</button></a>
+                </div>
             </div>
-            <div class="clothes_card">
+            <div class="clothes_card" id="producto-14">
                 <img src="../images/2022-03-20_17h29_17.png" alt="jacket" class="pic-1">
+                <div class="card__details">
                 <p><a href="html pages/shirt2.html">blue fashion parka</a></p>
                 <del>$45.990</del>
                 <span>$38.990</span>
+                </div>
+                <div class="cards__div-button">
+                    <a href="#"><button class="cards__button" type="button">Add to cart</button></a>
+                </div>
             </div>
 
     </div>
