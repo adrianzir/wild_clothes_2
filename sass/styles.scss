@@ -11,13 +11,14 @@ $boldfont: 'Montserrat',sans-serif;
 
 //general tags
 
-html{
+body{
     font-size: 100%;
         a{
             text-decoration: none;
             color: black;
         }
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 *{
     padding: 0%;

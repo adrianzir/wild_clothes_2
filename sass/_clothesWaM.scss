@@ -18,7 +18,7 @@
     padding: 20px 25px;
     margin: 20px;
     flex-wrap: wrap;
-    height: 88vh;
+    height: fit-content;
     align-items: center;
     justify-content: space-evenly;
     width: 30rem;
@@ -43,8 +43,7 @@
     justify-content: flex-start;
     width: 100%;
     p {
-        color: $rojito;
-        font-size: x-large;
+        font-size: 1.4rem;
         font-weight: bolder;
         text-transform: capitalize;
         font-family: Arial, Helvetica, sans-serif;
@@ -60,13 +59,17 @@
         margin: 0.5rem 0;
     }
 } 
+.pictures__holder{
+    overflow: hidden;
+    width: 100%;
+    height: 20rem;
 
+}
 #green_sweater, #orange-j{
     .special-pic2{
     z-index: 2;
     }
     .special-pic{
-        position:absolute;
         width: 286px;
         z-index: 1;
     }
@@ -126,7 +129,7 @@
 }
 @media only screen and (max-width: 790px) and (min-width: 1px){
     .sells-section{
-    flex-direction: column;
+        flex-direction: column;
         .aside{
             width: 100%;
             text-align: center;
@@ -136,6 +139,17 @@
         }
         .clothes_division{
             width: 100%;
+            .clothes_card{
+                .card__details{
+                    p{
+                        font-size: 15px;
+                    }
+                }
+                .pic-1{
+                    width: 100%;
+                    height: 40%;
+                }
+            }
         }
 }
 }
