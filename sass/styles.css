@@ -1,5 +1,6 @@
 body {
   font-size: 100%;
+  background-color: #f2f2f2;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
@@ -39,18 +40,19 @@ body a {
 }
 
 .mainsection {
-  background-image: url("../images/neutraliza_4176c12b_800x1100.jpg");
+  background: -webkit-gradient(linear, left top, right top, from(#000), color-stop(rgba(20, 20, 20, 0.938)), to(transparent)), url("../images/neutraliza_4176c12b_800x1100.jpg");
+  background: linear-gradient(to right, #000, rgba(20, 20, 20, 0.938), transparent), url("../images/neutraliza_4176c12b_800x1100.jpg");
   height: 600px;
   width: 100%;
-  padding-top: 120px;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding: 120px 0 0 1rem;
+  background-position: right;
+  background-repeat: repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 #mainsection__heading {
@@ -211,6 +213,8 @@ legend {
   display: -ms-flexbox;
   display: flex;
   background-color: #F83303;
+  background: -webkit-gradient(linear, left top, right top, from(#40e0d0), color-stop(#ff8c00), to(#f83303));
+  background: linear-gradient(to right, #40e0d0, #ff8c00, #f83303);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -229,12 +233,16 @@ legend {
   border: 1px solid lightgreen;
 }
 
-/*======================================breakpoint(3)==================================*/
+/*========================================================================*/
 @media screen and (max-width: 400px) and (min-width: 1px) {
   .mainsection {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -242,6 +250,10 @@ legend {
         -ms-flex-align: end;
             align-items: flex-end;
     padding: 50px 0px 0px 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: -webkit-gradient(linear, left top, right top, from(#000), to(transparent)), url("../images/neutraliza_4176c12b_800x1100.jpg");
+    background: linear-gradient(to right, #000, transparent), url("../images/neutraliza_4176c12b_800x1100.jpg");
   }
   #ad {
     display: none;
@@ -299,6 +311,22 @@ legend {
 
 /*=========================== breakpoint(4) index====================*/
 @media screen and (max-width: 600px) and (min-width: 401px) {
+  .mainsection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: -webkit-gradient(linear, left top, right top, from(#000), to(transparent)), url("../images/neutraliza_4176c12b_800x1100.jpg");
+    background: linear-gradient(to right, #000, transparent), url("../images/neutraliza_4176c12b_800x1100.jpg");
+  }
   #ad {
     display: none;
   }
@@ -499,6 +527,27 @@ nav a:hover {
   border-bottom: solid 1px #f83303;
 }
 
+.nav__button-search {
+  all: unset;
+  cursor: pointer;
+}
+
+.nav__button-search .nav__search {
+  width: 2rem;
+  background-color: transparent;
+  border: none;
+  height: 1.5rem;
+}
+
+.nav__button-search:hover {
+  fill: #f83303;
+  padding-bottom: 0.7rem;
+  border-bottom: solid 1px #f83303;
+}
+
+/*
+ segundo nav que contiene la barra buscadora
+*/
 .nav__2 {
   height: 70px;
   width: 100%;
@@ -559,6 +608,9 @@ nav a:hover {
   fill: gold;
 }
 
+/*
+    classes para abrir y cerrar el menu responsive con javascript
+*/
 .shut-burger, .collapse__ul-shutted, .collapse__ul {
   display: none;
 }
@@ -584,7 +636,7 @@ nav a:hover {
 }
 
 /*=============================================================================*/
-/*=============================  MEDIA QUERY ==================================*/
+/*=============================  MEDIA QUERIES ================================*/
 /*=============================================================================*/
 @media only screen and (max-width: 800px) and (min-width: 1px) {
   .nav__container {
@@ -1048,7 +1100,7 @@ nav a:hover {
 }
 
 .help__options .help__option__item {
-  height: 10rem;
+  height: auto;
   width: 20rem;
   background-color: #c7eceb;
   color: grey;
@@ -1060,9 +1112,9 @@ nav a:hover {
   text-transform: uppercase;
 }
 
-.help__options .help__option__item .option__item-p {
+.help__options .help__option__item .option__item-p, .help__options .help__option__item i {
   text-transform: lowercase;
-  margin-top: 1.25rem;
+  margin-top: 1.10rem;
 }
 
 .help__options .help__option__item:hover {

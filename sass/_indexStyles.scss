@@ -22,14 +22,14 @@
     text-align: left;
 }
 .mainsection{
-  background-image: url("../images/neutraliza_4176c12b_800x1100.jpg");
+  background: linear-gradient(to right, #000, rgba(20, 20, 20, 0.938), transparent), url("../images/neutraliza_4176c12b_800x1100.jpg");
   height: 600px;
   width: 100%;
-  padding-top: 120px; 
-  background-position: center;
-  background-repeat: no-repeat;
+  padding: 120px 0 0 1rem; 
+  background-position: right;
+  background-repeat: repeat;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 #mainsection__heading{
     font-size: 80px;
@@ -144,6 +144,7 @@ legend{
 .formulario{
     display: flex;
     background-color: #F83303 ;
+    background: linear-gradient(to right, #40e0d0, #ff8c00, $rojito);
     align-items: center;
     justify-content: space-around;
     width: 100%;
@@ -160,16 +161,21 @@ legend{
 //======================================================================
 //===================== MEDIA QUERIES===================================
 //===============================================================0=======
-/*======================================breakpoint(3)==================================*/
+/*========================================================================*/
 
 @media  screen and (max-width: 400px) and (min-width: 1px) {
 
    .mainsection{
    display: flex;
+   flex-direction: row;
    justify-content: center;
    align-items: flex-end;
    padding: 50px 0px 0px 0px;
-   }
+   background-repeat: no-repeat;
+   background-position: center;
+    background: linear-gradient(to right, #000, transparent),
+    url("../images/neutraliza_4176c12b_800x1100.jpg");
+    }
     #ad{
     display: none;
        
@@ -216,6 +222,15 @@ legend{
 /*=========================== breakpoint(4) index====================*/
 
 @media  screen and (max-width: 600px) and (min-width:401px) {
+    .mainsection{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background: linear-gradient(to right, #000, transparent),
+        url("../images/neutraliza_4176c12b_800x1100.jpg");
+    }
     #ad{
     display: none;
        

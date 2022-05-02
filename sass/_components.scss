@@ -62,6 +62,25 @@ nav{
                 
                  
 }
+.nav__button-search{
+    all: unset;
+    cursor: pointer;
+    .nav__search {
+        width: 2rem;
+        background-color: transparent;
+        border: none;
+        height: 1.5rem;
+    }
+    &:hover {
+        fill: $rojito;
+        padding-bottom: 0.7rem;
+        border-bottom: solid 1px $rojito;
+    }
+}
+
+/*
+ segundo nav que contiene la barra buscadora
+*/
 .nav__2{
     height: 70px;
     width: 100%;
@@ -104,10 +123,14 @@ nav{
         }
     }
 }
+/*
+    classes para abrir y cerrar el menu responsive con javascript
+*/
 .shut-burger, .collapse__ul-shutted, .collapse__ul{
     display: none;
 }
-// clase con estilos para la X que cierra el menu responsive
+// clase con estilos para la X que cierra el menu responsive 
+//- desabilitado por ahora : version dimension2 y master hoy 01-05-22
 .spanStyles{
     font-size: 30px;
     font-weight: bolder;
@@ -126,7 +149,7 @@ nav{
     }
 }
 /*=============================================================================*/
-/*=============================  MEDIA QUERY ==================================*/
+/*=============================  MEDIA QUERIES ================================*/
 /*=============================================================================*/
 
 @media only screen and (max-width: 800px) and (min-width: 1px){
