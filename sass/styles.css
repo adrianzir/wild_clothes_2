@@ -608,6 +608,25 @@ nav a:hover {
   fill: gold;
 }
 
+.searching__list {
+  background-color: aliceblue;
+  width: inherit;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: medium;
+  color: #000;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.5rem;
+}
+
 /*
     classes para abrir y cerrar el menu responsive con javascript
 */

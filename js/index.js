@@ -90,22 +90,23 @@ class Ropa{
         this.qty = qty;
     }
 }
-// const ordenarProductos = [
-//     new Ropa("green polo",8.999),
-//     new Ropa("black chino pants",22.990),
-//     new Ropa("regular ragged jeans",32.990),
-//     new Ropa("printed kimono - blue shirt",18.990),
-//     new Ropa("t-shirt eagle print",8.999),
-//     new Ropa("Brown leather jacket men",65.910),
-//     new Ropa("shiny cat print",8.999),
-//     new Ropa("Cool sport jacket - orange",42.960),
-//     new Ropa("Yellow top women oval design",6.999),
-//     new Ropa("grey fashion pants",9.900),
-//     new Ropa("color squared coat",35.999),
-//     new Ropa("sweater rounded neck green",14.990),
-//     new Ropa("burdeo women windbreaker",25.690),
-//     new Ropa("blue fashion parka",38.990)
-// ]
+const ordenarProductos = [
+    new Ropa("green polo",8.999),
+    new Ropa("black chino pants",22.990),
+    new Ropa("regular ragged jeans",32.990),
+    new Ropa("printed kimono - blue shirt",18.990),
+    new Ropa("t-shirt eagle print",8.999),
+    new Ropa("Brown leather jacket men",65.910),
+    new Ropa("shiny cat print",8.999),
+    new Ropa("Cool sport jacket - orange",42.960),
+    new Ropa("Yellow top women oval design",6.999),
+    new Ropa("grey fashion pants",9.900),
+    new Ropa("color squared coat",35.999),
+    new Ropa("sweater rounded neck green",14.990),
+    new Ropa("burdeo women windbreaker",25.690),
+    new Ropa("blue fashion parka",38.990)
+]
+// traigo los productos del DOM
 const producto1 = document.querySelector("#product-1");
 const producto2 = document.querySelector("#product-2");
 const producto3 = document.querySelector("#product-3");
@@ -122,13 +123,30 @@ const producto13 = document.querySelector("#product-13");
 const producto14 = document.querySelector("#product-14");
 
 const productos2 = []
+//creo la lista de productos a buscar
+const searchingBar = document.querySelector("#search__input");
+function mostrarLista(e){
+    const nodoUL = document.createElement("ul");
+    searchingBar.appendChild(nodoUL);
+    const nodoLi = document.createElement("li");
+    nodoUL.appendChild(nodoLi);
+    nodoUL.classList.add("searching__list");
+
+    for(const product of ordenarProductos){
+        const nodoLi = document.createElement("li");
+        nodoUL.appendChild(nodoLi);
+        const nodoTexto = document.createTextNode(product.productName);
+        nodoLi.appendChild(nodoTexto);
+    }
+}
+searchingBar.addEventListener("click",mostrarLista);
+
 
 /*             
     ----------------------------------------
     |              BUSCADOR                |
     ----------------------------------------
 */
-// const searchingBarContent = document.querySelector("#search__input");
 // let lense = document.getElementById("lupa");
 
 

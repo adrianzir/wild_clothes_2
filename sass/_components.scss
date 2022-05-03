@@ -62,6 +62,7 @@ nav{
                 
                  
 }
+// estilos del boton con el icono de buscar
 .nav__button-search{
     all: unset;
     cursor: pointer;
@@ -122,6 +123,18 @@ nav{
             }
         }
     }
+}
+// creo clase de javascript para lista del buscador
+.searching__list{
+    background-color: aliceblue;
+    width: inherit;
+    height: fit-content;
+    font-size: medium;
+    color: #000;
+    display: inline-flex;
+    position: absolute;
+    flex-direction: column;
+    padding: 0.5rem;
 }
 /*
     classes para abrir y cerrar el menu responsive con javascript
