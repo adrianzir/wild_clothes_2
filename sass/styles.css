@@ -563,8 +563,20 @@ nav a:hover {
   top: 90px;
 }
 
-.nav__2 #search__input {
+.nav__2 .search__input__dad {
+  overflow-y: visible;
   width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.nav__2 .search__input__dad #search__input {
+  width: 100%;
   margin: 1rem 0rem;
   padding: 0.5rem;
   border-radius: 1rem;
@@ -577,7 +589,7 @@ nav a:hover {
 
 .nav__2 #lupa .icon-search {
   fill: #f83303;
-  margin: calc(70px/2 - .9rem) 0;
+  margin: calc(70px/2 - 1.05rem) 1rem;
   border-radius: 50%;
   font-size: small;
   height: 2rem;
@@ -609,7 +621,7 @@ nav a:hover {
 }
 
 .searching__list {
-  background-color: aliceblue;
+  background-color: #f2f2f2;
   width: inherit;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -620,11 +632,30 @@ nav a:hover {
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: absolute;
+  top: 70px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0.5rem;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: large;
+  text-transform: capitalize;
+  z-index: 2;
+  overflow: hidden;
+  max-height: 70vh;
+}
+
+.searching__list li {
+  padding: .7rem .5rem;
+  cursor: pointer;
+}
+
+.searching__list li:hover {
+  background-color: #dfdbdb;
+  color: #f83303;
 }
 
 /*
@@ -1139,6 +1170,12 @@ nav a:hover {
 .help__options .help__option__item:hover {
   background-color: #3df4fa;
   color: #000;
+}
+
+.help__option__item-icon {
+  height: 1.5rem;
+  font-size: 35px;
+  margin-bottom: 2rem;
 }
 
 /*_________________________________________________________________________________________

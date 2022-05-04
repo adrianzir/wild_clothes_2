@@ -125,11 +125,11 @@ const producto14 = document.querySelector("#product-14");
 const productos2 = []
 //creo la lista de productos a buscar
 const searchingBar = document.querySelector("#search__input");
+const searchingBarDad = document.querySelector(".search__input__dad")
 function mostrarLista(e){
     const nodoUL = document.createElement("ul");
-    searchingBar.appendChild(nodoUL);
+    searchingBarDad.appendChild(nodoUL);
     const nodoLi = document.createElement("li");
-    nodoUL.appendChild(nodoLi);
     nodoUL.classList.add("searching__list");
 
     for(const product of ordenarProductos){
@@ -138,13 +138,14 @@ function mostrarLista(e){
         const nodoTexto = document.createTextNode(product.productName);
         nodoLi.appendChild(nodoTexto);
     }
+    nodoUL.appendChild(nodoLi);
 }
 searchingBar.addEventListener("click",mostrarLista);
 
 
 /*             
     ----------------------------------------
-    |              BUSCADOR                |
+    |              BUSCAR                  |
     ----------------------------------------
 */
 // let lense = document.getElementById("lupa");

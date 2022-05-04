@@ -3,6 +3,7 @@
 $rojito: #f83303;
 $activeColor: rgb(61, 244, 250);
 $colorLetraBoton: white;
+$colorBody: #f2f2f2;
 
 $elegantfont: 'Playfair Display', serif;
 $cursivefont: 'Courgette', cursive;
@@ -13,7 +14,7 @@ $boldfont: 'Montserrat',sans-serif;
 
 body{
     font-size: 100%;
-    background-color: #f2f2f2;
+    background-color: $colorBody;
         a{
             text-decoration: none;
             color: black;

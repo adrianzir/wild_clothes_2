@@ -91,19 +91,24 @@ nav{
     z-index: 0;
     position:relative;
     top: 90px;
-     
-        #search__input{
+        .search__input__dad{
+            overflow-y: visible;
             width: 40%;
-            margin: 1rem 0rem;
-            padding: 0.5rem;
-            border-radius: 1rem;
-            text-align: left;
+            display: flex;
+            flex-direction: column;
+            #search__input {
+                width: 100%;
+                margin: 1rem 0rem;
+                padding: 0.5rem;
+                border-radius: 1rem;
+                text-align: left;
+            }
         }
         #lupa{
             all: unset;
         .icon-search{
             fill: $rojito;
-            margin: calc(70px/2 - .9rem) 0;
+            margin: calc(70px/2 - 1.05rem) 1rem;
             border-radius: 50%;
             font-size: small;
             height: 2rem;
@@ -126,15 +131,32 @@ nav{
 }
 // creo clase de javascript para lista del buscador
 .searching__list{
-    background-color: aliceblue;
+    background-color: $colorBody;
     width: inherit;
     height: fit-content;
     font-size: medium;
     color: #000;
     display: inline-flex;
     position: absolute;
+    top: 70px;
     flex-direction: column;
     padding: 0.5rem;
+    list-style: none;
+    font-family: $boldfont;
+    font-weight: 500;
+    font-size: large;
+    text-transform: capitalize;
+    z-index: 2;
+    overflow: hidden;
+    max-height: 70vh;
+    li{
+        padding: .7rem .5rem;
+        cursor: pointer;
+        &:hover{
+            background-color: #dfdbdb;
+            color: $rojito;
+        }
+    }
 }
 /*
     classes para abrir y cerrar el menu responsive con javascript
