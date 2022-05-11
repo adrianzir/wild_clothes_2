@@ -532,7 +532,7 @@ nav a:hover {
   cursor: pointer;
 }
 
-.nav__button-search .nav__search {
+.nav__button-search .nav__search-icon {
   width: 2rem;
   background-color: transparent;
   border: none;
