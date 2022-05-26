@@ -65,23 +65,21 @@
     height: 20rem;
 
 }
-#green_sweater, #orange-j{
+
     .special-pic2{
     z-index: 2;
+    &:hover {
+            z-index: 1;
+    }
     }
     .special-pic{
         width: 286px;
         z-index: 1;
-    }
-    &:hover{
-        .special-pic{
-        z-index: 2;
-        .special-pic2{
-            z-index: 1;
+        &:hover {
+            z-index: 2;
         }
     }
-    }
-}
+
 /*====================================  Aside  ========================================*/
 .aside{
     height: auto;

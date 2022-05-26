@@ -34,9 +34,11 @@ const nombre =  document.querySelector(".name");
 const email = document.querySelector(".email");
 const age = document.querySelector(".age");
 const submit = document.querySelector("#send");
-/*
 
+/*
+    ========================================
     |      FUNCIONES PARA EL FORMULARIO    |
+    ========================================
 */
 
 function nameValidation(){
@@ -55,27 +57,40 @@ function nameValidation(){
 }
 function emailValidation(){
     email.addEventListener("input", ()=>{
-    if(email.value === ""){
+    if(email.value === "" || null){
         email.classList.toggle("emptyInput");
           Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Este campo debe ser llenado'
+            text: 'El campo email debe ser llenado'
             })
     }else {
         email.classList.toggle("inputAccepted");
     }
 })
 }
+// array y constructor para almacenar usuarios suscritos al newsletter
+let usersList = []
+
+class usersStorage{
+    constructor(userNamE, userEmaiL){
+        this.userNamE = userNamE;
+        this.userEmaiL = userEmaiL;
+    }
+}
 
 submit.addEventListener("click", (e)=>{  // <-------------------EVENTO
     e.preventDefault();
     nameValidation();
     emailValidation();
+    let userToStorage = new usersStorage(nombre.value,email.value)
+    usersList.push(userToStorage);
+    localStorage.setItem("newuser", JSON.stringify(usersList));
+
     if(nombre.value, email.value != ""){
-        Swal.fire(`Bienvenido ${nombre.value}, ahora recibiras notificaciones de nuestras actualizaciones, ofertas, productos y demas, al correo: ${email.value}`)
+        Swal.fire(`Bienvenido! ${nombre.value}, ahora recibiras notificaciones de nuestras actualizaciones, ofertas, productos y demas, al correo: ${email.value}`)
     }else{
-        
+        Swal.fire(`Los campos están vacios!`)
     }
 })
 /*
@@ -163,3 +178,49 @@ searchingBar.addEventListener("click",mostrarLista);
 // let filtrarPorPrecio = numeros.filter(obj => 
 //     {return obj.precio <= 1000});
 // console.log(filtrarPorPrecio)
+
+/*
+    ---------------------------------------
+    |     DROP DOWN OPTIONS IN CLOTHES    |
+    ---------------------------------------
+*/
+let nodoClothes = document.querySelector(".clothes__module");
+
+let nodoClothesOptions = document.createElement("ul");
+
+let nodoClothesOption1 = document.createElement("li");
+let nodoClothesOption2 = document.createElement("li");
+
+let nodoLinkOption1 = document.createElement("a");
+let nodoLinkOption2 = document.createElement("a");
+
+nodoLinkOption1.setAttribute("href","../html pages/gentlemanclo.html");
+nodoLinkOption2.setAttribute("href","../html pages/ladysclo.html");
+
+nodoClothesOption1.appendChild(nodoLinkOption1);
+nodoClothesOption2.appendChild(nodoLinkOption2);
+
+let textNodeMen = document.createTextNode("Men");
+let textNodeWomen = document.createTextNode("Women");
+
+nodoLinkOption1.appendChild(textNodeMen);
+nodoLinkOption2.appendChild(textNodeWomen);
+
+nodoClothesOptions.appendChild(nodoClothesOption1);
+nodoClothesOptions.appendChild(nodoClothesOption2);
+nodoClothesOptions.classList.add("clothes__module-open");
+
+// event listenner to make work the drop down list 
+nodoClothes.addEventListener("mouseenter",() =>{
+    nodoClothes.appendChild(nodoClothesOptions);
+});
+nodoClothes.addEventListener("mouseleave", ()=>{
+    nodoClothes.removeChild(nodoClothesOptions);
+});
+
+/*
+    ---------------------------------------
+    |         MAKING THE CART             |
+    ---------------------------------------
+*/
+

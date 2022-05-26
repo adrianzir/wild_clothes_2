@@ -129,6 +129,31 @@ nav{
         }
     }
 }
+// clase para abrir las secciones gentleman y ladies desde la barra de navegacion
+.clothes__module-open{
+    height: fit-content;
+    width: inherit;
+    color: #111112;
+    font-family: $elegantfont;
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    background-color: $colorLetraBoton;
+    position: absolute;
+    top: 3.7rem;
+    li{
+        margin: 0.5rem 0;
+        padding: 0 0.5rem;
+        &:hover {
+            color: $rojito;
+            cursor: pointer;
+        }
+    }
+        
+}
 // creo clase de javascript para lista del buscador
 .searching__list{
     background-color: $colorBody;
