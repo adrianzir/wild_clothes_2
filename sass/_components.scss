@@ -85,12 +85,13 @@ nav{
 .nav__2{
     height: 70px;
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: center;
     background-color: beige;
     z-index: 0;
     position:relative;
     top: 90px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
         .search__input__dad{
             overflow-y: visible;
             width: 40%;
@@ -129,6 +130,11 @@ nav{
         }
     }
 }
+// clase para desplegar la barra buscadora, ya que deberá estar oculta
+.open__bar{
+    display: flex !important;
+}
+
 // clase para abrir las secciones gentleman y ladies desde la barra de navegacion
 .clothes__module-open{
     height: fit-content;

@@ -87,7 +87,7 @@ submit.addEventListener("click", (e)=>{  // <-------------------EVENTO
     usersList.push(userToStorage);
     localStorage.setItem("newuser", JSON.stringify(usersList));
 
-    if(nombre.value, email.value != ""){
+    if(nombre.value && email.value != ""){
         Swal.fire(`Bienvenido! ${nombre.value}, ahora recibiras notificaciones de nuestras actualizaciones, ofertas, productos y demas, al correo: ${email.value}`)
     }else{
         Swal.fire(`Los campos están vacios!`)
@@ -160,15 +160,18 @@ searchingBar.addEventListener("click",mostrarLista);
 
 /*             
     ----------------------------------------
-    |              BUSCAR                  |
+    |      BARRA DE BUSCAR Y FUNCTION      |
     ----------------------------------------
 */
 // let lense = document.getElementById("lupa");
+const nodoNav2 = document.querySelector(".nav__2");
+const nodoBtnSearch = document.querySelector(".nav__button-search");
 
-
-
+nodoBtnSearch.addEventListener("click", () => {
+    nodoNav2.classList.toggle("open__bar");
+} );
 // lense.addEventListener("click",);
-// // indexOf !
+// // indexOf 
 // // 
 /*
     ----------------------------------------
@@ -223,4 +226,27 @@ nodoClothes.addEventListener("mouseleave", ()=>{
     |         MAKING THE CART             |
     ---------------------------------------
 */
+//
+//
+//
+//
+/*
+    ---------------------------------------
+    |             adding fetch            |
+    ---------------------------------------
+*/
+const nodoButtonToFilter = document.querySelector(".btn__filter-type");
+const nodoUlOfFilters = document.querySelector(".product__type");
 
+ function triggerFetch() {
+     fetch("data.json")
+     .then(result => result.json())
+     .then(result => {
+         let datos = JSON.parse(result);
+         datos.forEach(user => {
+             nodoUlOfFilters.innerHTML += `
+             <li>hola</li>`
+         })
+     })
+ }
+ nodoButtonToFilter.addEventListener("click", triggerFetch());

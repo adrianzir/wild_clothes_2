@@ -551,9 +551,7 @@ nav a:hover {
 .nav__2 {
   height: 70px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -561,6 +559,8 @@ nav a:hover {
   z-index: 0;
   position: relative;
   top: 90px;
+  -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .nav__2 .search__input__dad {
@@ -618,6 +618,12 @@ nav a:hover {
 
 .nav__2 #lupa .icon-search:active {
   fill: gold;
+}
+
+.open__bar {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .clothes__module-open {
@@ -1597,7 +1603,7 @@ i {
 .cart {
   padding-top: 80px;
   height: 100vh;
-  margin: 1rem 10px;
+  margin: 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1616,7 +1622,7 @@ i {
   color: orangered;
   padding: 30px;
   border: red solid 3px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .footer-cart {
