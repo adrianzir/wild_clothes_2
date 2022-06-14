@@ -79,7 +79,7 @@ class usersStorage{
     }
 }
 
-submit.addEventListener("click", (e)=>{  // <-------------------EVENTO
+submit.addEventListener("click", (e) =>{  // <-------------------EVENTO
     e.preventDefault();
     nameValidation();
     emailValidation();
@@ -226,10 +226,20 @@ nodoClothes.addEventListener("mouseleave", ()=>{
     |         MAKING THE CART             |
     ---------------------------------------
 */
-//
-//
-//
-//
+//variables
+const cartIcon = document.querySelector("#cart__open");
+const cartSideBar = document.querySelector(".cart__sidebar");
+const closeSideBar = document.querySelector(".close__sidebar");
+// abrir carrito
+cartIcon.addEventListener("click",(e)=>{
+    e.preventDefault();
+    cartSideBar.classList.add("cart__openned");
+})
+//cerrar carrito
+closeSideBar.addEventListener("click", ()=>{
+    cartSideBar.classList.remove("cart__openned");
+})
+
 /*
     ---------------------------------------
     |             adding fetch            |
@@ -244,8 +254,8 @@ const nodoUlOfFilters = document.querySelector(".product__type");
      .then(result => {
          let datos = JSON.parse(result);
          datos.forEach(user => {
-             nodoUlOfFilters.innerHTML += `
-             <li>hola</li>`
+             nodoUlOfFilters.innerHTML += 
+             `<li></li>`
          })
      })
  }

@@ -91,7 +91,7 @@ nav{
     z-index: 0;
     position:relative;
     top: 90px;
-    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: 3s 1s ease-in-out;
         .search__input__dad{
             overflow-y: visible;
             width: 40%;

@@ -1,31 +1,14 @@
-.container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 70px 550px 60px;
-    grid-gap: 0;
-    height: 1000px;
-    grid-template-areas: "header"
-                         "body "
-                         "footer"  ;
-
-
-}
 .section__shirtII__container{
     grid-area: body;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 275px 275px;
     grid-gap: 0;
-    height: 110vh;
-    margin-top: 120px;
-    margin-bottom: 10rem;
-    
+    height: 100%;
+    padding: 100px 0 0 0;
+    margin-bottom: 15rem;  
 }
-.footer-shirt2{
-    margin-top: 10px;
-    position: absolute;
-    top: 120vh;
-}
+
 .div__shirtII__image{
     grid-row-start: 1;
     grid-row-end: 3;
