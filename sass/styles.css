@@ -24,10 +24,12 @@ body a {
   position: absolute;
   right: 4.5rem;
   bottom: 90px;
-  background-color: #F83303;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f83303), color-stop(#fe0000), color-stop(rgba(255, 1, 0, 0.952)), color-stop(#f80303), color-stop(red), to(#6e0000));
+  background: linear-gradient(to bottom, #f83303, #fe0000, rgba(255, 1, 0, 0.952), #f80303, red, #6e0000);
   text-align: center;
-  border: white double 15px;
+  border-radius: 10px;
   z-index: 1;
+  color: #fff;
 }
 
 #ad .sale {
@@ -37,6 +39,7 @@ body a {
 
 .lorem {
   text-align: left;
+  color: #000;
 }
 
 .mainsection {
@@ -463,7 +466,8 @@ nav {
 nav .nav__container {
   height: 50px;
   width: 18%;
-  background-color: #f83303;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f83303), color-stop(#ff3c0b), color-stop(#ff5100), color-stop(red), color-stop(#ff0606), to(#6e0000));
+  background: linear-gradient(to bottom, #f83303, #ff3c0b, #ff5100, red, #ff0606, #6e0000);
   padding: 0.25rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -477,6 +481,7 @@ nav .nav__container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 10px;
 }
 
 nav .nav__container #brand {
@@ -555,12 +560,12 @@ nav a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: beige;
+  background-color: transparent;
   z-index: 0;
   position: relative;
   top: 90px;
-  -webkit-transition: 3s 1s ease-in-out;
-  transition: 3s 1s ease-in-out;
+  -webkit-transition: 3s 1s ease;
+  transition: 3s 1s ease;
 }
 
 .nav__2 .search__input__dad {
@@ -579,8 +584,9 @@ nav a:hover {
   width: 100%;
   margin: 1rem 0rem;
   padding: 0.5rem;
-  border-radius: 1rem;
+  border-radius: 1.12rem;
   text-align: left;
+  border: unset;
 }
 
 .nav__2 #lupa {
@@ -588,17 +594,17 @@ nav a:hover {
 }
 
 .nav__2 #lupa .icon-search {
-  fill: #f83303;
+  fill: #000;
   margin: calc(70px/2 - 1.05rem) 1rem;
-  border-radius: 50%;
+  border-radius: 48%;
   font-size: small;
-  height: 2rem;
-  width: 2.5rem;
+  height: 1.98rem;
+  width: 3rem;
   padding: .30rem .25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  opacity: .6;
+  opacity: .8;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -609,6 +615,12 @@ nav a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: absolute;
+  left: calc(100% - 34%);
+  top: -3px;
+  z-index: 2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f83303), color-stop(#fe0000), color-stop(rgba(255, 1, 0, 0.952)), color-stop(#f80303), color-stop(red), to(#6e0000));
+  background: linear-gradient(to bottom, #f83303, #fe0000, rgba(255, 1, 0, 0.952), #f80303, red, #6e0000);
   cursor: pointer;
 }
 
@@ -617,7 +629,9 @@ nav a:hover {
 }
 
 .nav__2 #lupa .icon-search:active {
-  fill: gold;
+  fill: #fcf4f4;
+  background: -webkit-gradient(linear, left top, right top, from(#ff9100), color-stop(#f83303), color-stop(red), color-stop(red), color-stop(#f83303), to(#ff9100));
+  background: linear-gradient(to right, #ff9100, #f83303, red, red, #f83303, #ff9100);
 }
 
 .open__bar {
@@ -897,23 +911,7 @@ nav a:hover {
   cursor: pointer;
 }
 
-.cards__div-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-}
-
-.cards__div-button .cards__button {
+.cards__button {
   background-color: #f83303;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -930,11 +928,11 @@ nav a:hover {
   cursor: pointer;
 }
 
-.cards__div-button .cards__button:hover {
+.cards__button:hover {
   opacity: 1;
 }
 
-.cards__div-button .cards__button:active {
+.cards__button:active {
   background-color: gold;
 }
 
@@ -1039,7 +1037,7 @@ nav a:hover {
 }
 
 .dad {
-  height: 1000px;
+  height: 100vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1048,7 +1046,7 @@ nav a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 150px 0 1rem 0;
+  padding: 110px 0 1rem 0;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   -webkit-box-pack: space-evenly;
@@ -1058,7 +1056,7 @@ nav a:hover {
 
 .container__1 {
   width: 45%;
-  height: 810px;
+  height: 100vh;
   padding: 0%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1077,7 +1075,7 @@ nav a:hover {
 
 .container__2 {
   width: 45%;
-  height: 810px;
+  height: 100vh;
   padding: 0%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1183,7 +1181,6 @@ nav a:hover {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  border: solid grey 3px;
   height: 40%;
   width: auto;
   cursor: pointer;
@@ -1192,8 +1189,9 @@ nav a:hover {
 .help__options .help__option__item {
   height: auto;
   width: 20rem;
-  background-color: #c7eceb;
-  color: grey;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f83303), color-stop(#fe0000), color-stop(rgba(255, 1, 0, 0.952)), color-stop(#f80303), color-stop(red), to(#6e0000));
+  background: linear-gradient(to bottom, #f83303, #fe0000, rgba(255, 1, 0, 0.952), #f80303, red, #6e0000);
+  color: black;
   border-radius: 15px;
   margin: 20px 5px;
   font-size: large;
@@ -1208,8 +1206,12 @@ nav a:hover {
 }
 
 .help__options .help__option__item:hover {
-  background-color: #3df4fa;
+  background: #3df4fa;
   color: #000;
+}
+
+.help__options .help__option__item:active {
+  background-color: gold;
 }
 
 .help__option__item-icon {
@@ -1786,13 +1788,13 @@ i {
 }
 
 .card__details p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: bolder;
   text-transform: capitalize;
   font-family: Arial, Helvetica, sans-serif;
   background-color: white;
   margin: 1rem 0;
-  padding: 0.75rem 0.25rem;
+  padding: .1rem 0.25rem;
   border-bottom: #f83303 2px solid;
   overflow: hidden;
 }
@@ -1800,7 +1802,7 @@ i {
 .card__details del,
 .card__details span {
   display: block;
-  margin: 0.5rem 0;
+  margin: .5rem 0 1rem 0;
 }
 
 .pictures__holder {

@@ -8,10 +8,11 @@
     position: absolute;
     right: 4.5rem;
     bottom: 90px;
-    background-color: #F83303;
+    background: linear-gradient(to bottom, $rojito, rgb(254, 0, 0), rgba(255, 1, 0, 0.952), rgb(248, 3, 3), red, rgb(110, 0, 0));
     text-align: center;
-    border: white double 15px;
+    border-radius: 10px;
     z-index: 1;
+    color: #fff;
         .sale{
         font-size: 70px;
         font-family: 'Playfair Display', serif;
@@ -20,6 +21,7 @@
 
 .lorem{
     text-align: left;
+    color: #000;
 }
 .mainsection{
   background: linear-gradient(to right, #000, rgba(20, 20, 20, 0.938), transparent), url("../images/neutraliza_4176c12b_800x1100.jpg");

@@ -79,7 +79,7 @@ class usersStorage{
     }
 }
 
-submit.addEventListener("click", (e) =>{  // <-------------------EVENTO
+submit.addEventListener("click", (e)=>{ 
     e.preventDefault();
     nameValidation();
     emailValidation();
@@ -137,6 +137,22 @@ const producto12 = document.querySelector("#green_sweater");
 const producto13 = document.querySelector("#product-13");
 const producto14 = document.querySelector("#product-14");
 
+const products = [
+    producto1 , 
+    producto2 , 
+    producto3 , 
+    producto4 , 
+    producto5 , 
+    producto6 , 
+    producto7 , 
+    producto8, 
+    producto9 , 
+    producto10, 
+    producto11 , 
+    producto12, 
+    producto13 , 
+    producto14 
+ ]
 const productos2 = []
 //creo la lista de productos a buscar
 const searchingBar = document.querySelector("#search__input");
@@ -227,11 +243,13 @@ nodoClothes.addEventListener("mouseleave", ()=>{
     ---------------------------------------
 */
 //variables
-const cartIcon = document.querySelector("#cart__open");
+const cartIcon = document.querySelector(".cart__open");
 const cartSideBar = document.querySelector(".cart__sidebar");
 const closeSideBar = document.querySelector(".close__sidebar");
+const addToCart = document.querySelectorAll(".add-to-cart");
+const productsContainer = document.querySelector(".clothes_division");
 // abrir carrito
-cartIcon.addEventListener("click",(e)=>{
+cartIcon.addEventListener("click",(e)=>{    
     e.preventDefault();
     cartSideBar.classList.add("cart__openned");
 })
@@ -239,24 +257,62 @@ cartIcon.addEventListener("click",(e)=>{
 closeSideBar.addEventListener("click", ()=>{
     cartSideBar.classList.remove("cart__openned");
 })
+//asignarle a cada boton su funcion 
+for (i = 0; i < addToCart.length; i++) {
+    let button = addToCart[i];
+    button.addEventListener("click",agregarAlCarrito());   
+}
+function agregarAlCarrito(e){
+    let button = e.target;
+    let cartItem = button.parentElement;
+    let productId = cartItem.getAttribute("id");
+    let productNam = cartItem.querySelector("p>a").innerText;
+    let productPric = cartItem.querySelector("span").innerText;
+    let productImgSrc = cartItem.querySelector(".pic-1").src;
 
+    addElements(productId,productNam,productPric,productImgSrc);
+}
+function addElements(productId,productNam,productPric,productImgSrc){
+    let productRow = document.createElement("tr");
+    let productRows = document.querySelector(".cart__sidebar__table");
+    let productArray = document.querySelectorAll("product-on-cart");
+    
+    for(let i =0; i < productArray.length; i++){
+        if(productArray[i].getAttribute("id") == productId){
+            alert("this product is already in the cart");
+        }
+    }
+    // creo la row de los productos
+    let productItemRow = `
+    <tr class="product-on-cart">
+    <img class="cart-img" src="${productImgSrc}"></img>
+    <td>${productNam}</td>
+    <td>${productPric}</td>
+    <input class="product-qty" type="number" value="1">
+    <button class="remove-btn">Remove</button>
+    </tr>
+    `
+    productRow.innerHTML = productItemRow;
+    productRows.append(productRow);
+    
+}
+    
 /*
     ---------------------------------------
     |             adding fetch            |
     ---------------------------------------
 */
-const nodoButtonToFilter = document.querySelector(".btn__filter-type");
-const nodoUlOfFilters = document.querySelector(".product__type");
+// const nodoButtonToFilter = document.querySelector(".btn__filter-type");
+// const nodoUlOfFilters = document.querySelector(".product__type");
 
- function triggerFetch() {
-     fetch("data.json")
-     .then(result => result.json())
-     .then(result => {
-         let datos = JSON.parse(result);
-         datos.forEach(user => {
-             nodoUlOfFilters.innerHTML += 
-             `<li></li>`
-         })
-     })
- }
- nodoButtonToFilter.addEventListener("click", triggerFetch());
+//  function triggerFetch() {
+//      fetch("data.json")
+//      .then(result => result.json())
+//      .then(result => {
+//          let datos = JSON.parse(result);
+//          datos.forEach(user => {
+//              nodoUlOfFilters.innerHTML += 
+//              `<li></li>`
+//          })
+//      })
+//  

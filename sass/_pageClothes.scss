@@ -1,17 +1,17 @@
 // clothes page new config
 .dad{
-    height: 1000px;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: row;
-    padding: 150px 0 1rem 0;
+    padding: 110px 0 1rem 0;
     flex-wrap: nowrap;
     justify-content: space-evenly;
     
 }
 @mixin imagen {
     width: 45%;
-    height: 810px;
+    height: 100vh;
     padding: 0%;
     display: flex;
     flex-direction: column;
