@@ -34,7 +34,7 @@
                         <path
                             d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z" />
                     </svg></button></li>
-            <li><a href="cart.html" target="_self" class="cart__open"><i class="fa fa-solid fa-cart-plus"></i></a></li>
+            <li><a href="cart.html" target="_self" class="cart__open"><i class="fa fa-solid fa-cart-plus" data-content="0"></i></a></li>
         </ul>
         <div class="burger">
         <div class="line"></div>
@@ -79,17 +79,20 @@
             <a href="ladysclo.html"><button type="button" class="container__2__button">Women</button></a>
         </div>
         <!----------------- CART ASIDE ------------------->
-        <aside class="cart__sidebar overlay">
+        <aside class="cart__sidebar">
             <div class="container-close__sidebar">
                 <button class="close__sidebar">X</button>
             </div>
-            <table id="cart__sidebar__table">
-                <tr>
-                    <td>Total</td>
-                    <td>$0</td>
-                </tr>
-            </table>
-            <button class="cart__sidebar__btn"><a href="html pages/cart.html">Ir al carrito</a></button>
+            <div class="products-container">
+
+            </div>
+            <div class="cart__sidebar__footer">
+            <h3>
+                Total: $
+                <strong class="total-cost">0</strong>
+            </h3>
+            <button class="cart__sidebar__btn"><a href="cart.html">Ir al carrito</a></button>
+            </div>
         </aside>
     </main>
 
@@ -118,7 +121,7 @@
 <!---
     |--------------------------   SCRIPTS   --------------------------|
 ---->
-<script src="../js/index.js"></script>
+<script src="../js/main.js"></script>
 
 </body>
 </html>

@@ -5,9 +5,11 @@
         .help__title{
             text-align: center;
             font-family: 'Playfair Display', serif;
+            
             h1{
                 font-weight: 900;
                 font-size: xx-large;
+                
             }
 
 
@@ -34,6 +36,7 @@
             text-align: center;
             padding: 1rem;
             text-transform: uppercase;
+            box-shadow: 10px 20px 40px gray;
                 .option__item-p, i{
                     text-transform: lowercase;
                     margin-top: 1.10rem;
@@ -41,9 +44,11 @@
              &:hover{
                 background: $activeColor;
                 color: #000;
+                box-shadow: 14px 24px 30px black;
+                transform: scale(1.05);
             }
             &:active{
-                background-color: gold;
+                background-color: $rojito;
             }
     
     }

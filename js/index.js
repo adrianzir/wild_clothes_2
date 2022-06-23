@@ -1,31 +1,4 @@
 /*
-       VARIABLES
-*/
-const burgerState = document.querySelector(".div__collapse");
-const burger = document.querySelector(".burger");
-const nav = document.querySelector(".nav");
-//  CREO LA X PARA CERRAR EL MENU     
-const buttonToCloseMenu = document.createElement("span");
-buttonToCloseMenu.classList.add("spanStyles");
-buttonToCloseMenu.innerHTML = "X";
-
-/*
-       FUNCIONES PARA EL BOTON DE LA HAMBURGUESA DEL NAV
-*/
-function openMenu() {
-    burgerState.classList.toggle( "collapse__ul-shutted");
-    burger.classList.toggle("shut-burger");
-    // nav.appendChild(buttonToCloseMenu);
-}
-burger.addEventListener("click", openMenu);
-
-function closeMenu(){
-    burgerState.classList.toggle("collapse__ul-shutted");
-    burger.classList.toggle("shut-burger");
-}
-buttonToCloseMenu.addEventListener("click", closeMenu()); // <-------------------EVENTO
-
-/*
     ----------------------------------------
     |      VARIABLES PARA EL FORMULARIO    |
     ----------------------------------------
@@ -57,7 +30,7 @@ function nameValidation(){
 }
 function emailValidation(){
     email.addEventListener("input", ()=>{
-    if(email.value === "" || null){
+    if(email.value === ""){
         email.classList.toggle("emptyInput");
           Swal.fire({
             icon: 'error',
@@ -72,7 +45,7 @@ function emailValidation(){
 // array y constructor para almacenar usuarios suscritos al newsletter
 let usersList = []
 
-class usersStorage{
+class UsersStorage{
     constructor(userNamE, userEmaiL){
         this.userNamE = userNamE;
         this.userEmaiL = userEmaiL;
@@ -83,7 +56,7 @@ submit.addEventListener("click", (e)=>{
     e.preventDefault();
     nameValidation();
     emailValidation();
-    let userToStorage = new usersStorage(nombre.value,email.value)
+    let userToStorage = new UsersStorage(nombre.value,email.value)
     usersList.push(userToStorage);
     localStorage.setItem("newuser", JSON.stringify(usersList));
 
@@ -155,9 +128,10 @@ const products = [
  ]
 const productos2 = []
 //creo la lista de productos a buscar
-const searchingBar = document.querySelector("#search__input");
-const searchingBarDad = document.querySelector(".search__input__dad")
-function mostrarLista(e){
+const searchingBar = document.querySelector(".search__input");
+const searchingBarDad = document.querySelector(".search__input__dad");
+const iconSearch = document.querySelector('.icon-search');
+function mostrarLista(){
     const nodoUL = document.createElement("ul");
     searchingBarDad.appendChild(nodoUL);
     const nodoLi = document.createElement("li");
@@ -170,6 +144,9 @@ function mostrarLista(e){
         nodoLi.appendChild(nodoTexto);
     }
     nodoUL.appendChild(nodoLi);
+    iconSearch.addEventListener("click", () => {
+      searchingBarDad.removeChild(nodoUL);
+    });
 }
 searchingBar.addEventListener("click",mostrarLista);
 
@@ -186,133 +163,5 @@ const nodoBtnSearch = document.querySelector(".nav__button-search");
 nodoBtnSearch.addEventListener("click", () => {
     nodoNav2.classList.toggle("open__bar");
 } );
-// lense.addEventListener("click",);
-// // indexOf 
-// // 
-/*
-    ----------------------------------------
-    |              FILTROS                 |
-    ----------------------------------------
-*/
-// let filtrarPorPrecio = numeros.filter(obj => 
-//     {return obj.precio <= 1000});
-// console.log(filtrarPorPrecio)
 
-/*
-    ---------------------------------------
-    |     DROP DOWN OPTIONS IN CLOTHES    |
-    ---------------------------------------
-*/
-let nodoClothes = document.querySelector(".clothes__module");
 
-let nodoClothesOptions = document.createElement("ul");
-
-let nodoClothesOption1 = document.createElement("li");
-let nodoClothesOption2 = document.createElement("li");
-
-let nodoLinkOption1 = document.createElement("a");
-let nodoLinkOption2 = document.createElement("a");
-
-nodoLinkOption1.setAttribute("href","../html pages/gentlemanclo.html");
-nodoLinkOption2.setAttribute("href","../html pages/ladysclo.html");
-
-nodoClothesOption1.appendChild(nodoLinkOption1);
-nodoClothesOption2.appendChild(nodoLinkOption2);
-
-let textNodeMen = document.createTextNode("Men");
-let textNodeWomen = document.createTextNode("Women");
-
-nodoLinkOption1.appendChild(textNodeMen);
-nodoLinkOption2.appendChild(textNodeWomen);
-
-nodoClothesOptions.appendChild(nodoClothesOption1);
-nodoClothesOptions.appendChild(nodoClothesOption2);
-nodoClothesOptions.classList.add("clothes__module-open");
-
-// event listenner to make work the drop down list 
-nodoClothes.addEventListener("mouseenter",() =>{
-    nodoClothes.appendChild(nodoClothesOptions);
-});
-nodoClothes.addEventListener("mouseleave", ()=>{
-    nodoClothes.removeChild(nodoClothesOptions);
-});
-
-/*
-    ---------------------------------------
-    |         MAKING THE CART             |
-    ---------------------------------------
-*/
-//variables
-const cartIcon = document.querySelector(".cart__open");
-const cartSideBar = document.querySelector(".cart__sidebar");
-const closeSideBar = document.querySelector(".close__sidebar");
-const addToCart = document.querySelectorAll(".add-to-cart");
-const productsContainer = document.querySelector(".clothes_division");
-// abrir carrito
-cartIcon.addEventListener("click",(e)=>{    
-    e.preventDefault();
-    cartSideBar.classList.add("cart__openned");
-})
-//cerrar carrito
-closeSideBar.addEventListener("click", ()=>{
-    cartSideBar.classList.remove("cart__openned");
-})
-//asignarle a cada boton su funcion 
-for (i = 0; i < addToCart.length; i++) {
-    let button = addToCart[i];
-    button.addEventListener("click",agregarAlCarrito());   
-}
-function agregarAlCarrito(e){
-    let button = e.target;
-    let cartItem = button.parentElement;
-    let productId = cartItem.getAttribute("id");
-    let productNam = cartItem.querySelector("p>a").innerText;
-    let productPric = cartItem.querySelector("span").innerText;
-    let productImgSrc = cartItem.querySelector(".pic-1").src;
-
-    addElements(productId,productNam,productPric,productImgSrc);
-}
-function addElements(productId,productNam,productPric,productImgSrc){
-    let productRow = document.createElement("tr");
-    let productRows = document.querySelector(".cart__sidebar__table");
-    let productArray = document.querySelectorAll("product-on-cart");
-    
-    for(let i =0; i < productArray.length; i++){
-        if(productArray[i].getAttribute("id") == productId){
-            alert("this product is already in the cart");
-        }
-    }
-    // creo la row de los productos
-    let productItemRow = `
-    <tr class="product-on-cart">
-    <img class="cart-img" src="${productImgSrc}"></img>
-    <td>${productNam}</td>
-    <td>${productPric}</td>
-    <input class="product-qty" type="number" value="1">
-    <button class="remove-btn">Remove</button>
-    </tr>
-    `
-    productRow.innerHTML = productItemRow;
-    productRows.append(productRow);
-    
-}
-    
-/*
-    ---------------------------------------
-    |             adding fetch            |
-    ---------------------------------------
-*/
-// const nodoButtonToFilter = document.querySelector(".btn__filter-type");
-// const nodoUlOfFilters = document.querySelector(".product__type");
-
-//  function triggerFetch() {
-//      fetch("data.json")
-//      .then(result => result.json())
-//      .then(result => {
-//          let datos = JSON.parse(result);
-//          datos.forEach(user => {
-//              nodoUlOfFilters.innerHTML += 
-//              `<li></li>`
-//          })
-//      })
-//  

@@ -7,7 +7,7 @@
     width: 300px;
     position: absolute;
     right: 4.5rem;
-    bottom: 90px;
+    top: 200px;
     background: linear-gradient(to bottom, $rojito, rgb(254, 0, 0), rgba(255, 1, 0, 0.952), rgb(248, 3, 3), red, rgb(110, 0, 0));
     text-align: center;
     border-radius: 10px;
@@ -136,6 +136,7 @@ input{
     border: 1px solid lightgrey;
     border-bottom: $rojito 2px solid;
     text-align: center;
+    caret-color: $rojito;
 }
 legend{
     margin: 20px 20px;
