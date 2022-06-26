@@ -82,9 +82,9 @@ function getTheContent(product){
             buyStuff = [...buyStuff, infoProduct];
         }
 
-   
     loadHtml();
     // console.log(infoProduct)
+
 };
 
 function loadHtml(){
@@ -105,56 +105,8 @@ function loadHtml(){
         productsDiv.appendChild(row);
     })
     totalCost.innerHTML = totalCount;
+    localStorage.setItem("carrito", JSON.stringify(buyStuff));
 }
-function clearHtml(){
+function clearHtml() {
     productsDiv.innerHTML = '';
 }
-
-
-
-
-
-
-
-
-
-
-// //asignarle a cada boton su funcion
-// for (i = 0; i < addToCart.length; i++) {
-//   const button = addToCart[i];
-//   button.addEventListener("click", agregarAlCarrito());
-// }
-
-// function agregarAlCarrito(e) {
-//   e.target;
-//   let cartItem = button.parentElement;
-//   let productId = cartItem.getAttribute("id");
-//   let productNam = cartItem.querySelector("p >a").innerText;
-//   let productPric = cartItem.querySelector("span").innerText;
-//   let productImgSrc = cartItem.querySelector(".pic-1").src;
-
-//   addElements(productId, productNam, productPric, productImgSrc);
-// }
-// function addElements(productId, productNam, productPric, productImgSrc) {
-//   let productRow = document.createElement("tr");
-//   let productRows = document.querySelector(".cart__sidebar__table");
-//   let productArray = document.querySelectorAll("product-on-cart");
-
-//   for (let i = 0; i < productArray.length; i++) {
-//     if (productArray[i].getAttribute("id") == productId) {
-//       alert("this product is already in the cart");
-//     }
-//   }
-//   // creo la row de los productos
-//   let productItemRow = `
-//     <tr class="product-on-cart">
-//     <img class="cart-img" src="${productImgSrc}"></img>
-//     <td>${productNam}</td>
-//     <td>${productPric}</td>
-//     <input class="product-qty" type="number" value="1">
-//     <button class="remove-btn">Remove</button>
-//     </tr>
-//     `;
-//   productRow.innerHTML = productItemRow;
-//   productRows.append(productRow);
-// }
